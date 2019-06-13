@@ -1,0 +1,337 @@
+id_cdec,basin_cdec,group_cdec,lat_cdec,lon_cdec,nearby_cty_cdec,gage_oper_cdec,data_collect_cdec,county_cdec,name_cdec,gelev_ft_cdec
+JED,Smith R,North Coast,41.79150391,-124.0761871,Crescent City,USGS & DWR,,Del Norte,Smith R Nr Crescent City (jed Smith Sp),120
+IHC,Klamath R,North Coast,41.83512497,-123.38311,Happy Camp,USGS,,Siskiyou,Indian Creek Near Happy Camp,1198
+OLS,Klamath R,North Coast,41.30345917,-123.5345001,Orleans,USGS & DWR,,Humboldt,Klamath River At Orleans,430
+KIG,Klamath R,North Coast,41.92791748,-122.444191,Yreka,USGS,,Siskiyou,Klamath River Below Iron Gate Dam,2162
+KNK,Klamath R,North Coast,41.51095581,-123.9795151,Klamath,USGS,,Del Norte,Klamath River Near Klamath,60
+KSV,Klamath R,North Coast,41.85373688,-123.2322769,Yreka,USGS,,Siskiyou,Klamath River Near Seiad Valley,1320
+SFJ,Klamath R,North Coast,41.64068985,-123.0150375,Fort Jones,USGS & Quartz Valley Tribe,Satellite,Siskiyou,Scott River Near Fort Jones,2623
+LSR,Shasta R,North Coast,41.73309326,-122.3503571,Montague,Nature Conservancy,Data Xchg-nat Conser,Siskiyou,Little Shasta R Nr Montague,2800
+SPU,Shasta R,North Coast,41.61,-122.47111,Grenada,DWR/North Region ,Satellite,Siskiyou,Shasta R At Grenada Pump Plant,2560
+SRM,Shasta R,North Coast,41.70903015,-122.5380783,Montague,USGS,,Siskiyou,Shasta River Near Montague,2458
+SRY,Shasta R,North Coast,41.82291794,-122.5955811,Yreka,USGS,,Siskiyou,Shasta River Near Yreka,2000
+SMS,Salmon R,North Coast,41.37651443,-123.477005,Orleans,USGS,,Siskiyou,Salmon River At Somes Bar,483
+GVC,Trinity R,North Coast,40.68653488,-122.8611374,Lewiston,USGS,,Trinity,Grass Valley Ck Nr Lewiston,1680
+ICD,Trinity R,North Coast,40.6519,-122.9133,Douglas City,USGS,,Trinity,Indian Ck Nr Douglas City,1670
+LWS,Trinity R,North Coast,40.71931076,-122.8036346,Lewiston,USGS & USBR,,Trinity,Lewiston (water Quality),1830
+NTR,Trinity R,North Coast,40.782,-123.127,Helena,USGS & USBR,,Trinity,Nf Trinity River At Helena,1345
+RCL,Trinity R,North Coast,40.725,-122.834,Lewiston,USGS & USBR,,Trinity,Rush Creek Near Lewiston,1700
+TBH,Trinity R,North Coast,40.6498642,-123.4942017,Hyampom,USGS,,Humboldt,South Fork Trinity River Below Hyampom,12
+TRC,Trinity R,North Coast,41.11125565,-122.7055817,Trinity Center,USGS,,Trinity,Trinity R Abv Coffee Cr Nr Trinity Ctr,2537
+NFH,Trinity R,North Coast,40.7665329,-123.1144791,Helena,USGS & USBR,,Trinity,Trinity R Abv Nf Trinity Nr Helena,1410
+TJC,Trinity R,North Coast,40.72847748,-123.0619736,Junction City,USGS,,Trinity,Trinity R At Junction City,1445
+DGC,Trinity R,North Coast,40.64527893,-122.956665,Douglas City,USGS & USBR,,Trinity,Trinity River At Douglas City,1600
+HPA,Trinity R,North Coast,41.04985046,-123.6736679,Hoopa,USGS & DWR,,Humboldt,Trinity River At Hoopa,330
+TLK,Trinity R,North Coast,40.673,-122.919,Douglas City,USGS & USBR,,Trinity,Trinity River Below Limekiln Gulch,1650
+TBR,Trinity R,North Coast,40.78874969,-123.4400406,Burnt Ranch,USGS,,Trinity,Trinity River Near Burnt Ranch,944
+OKN,Redwood Cr,North Coast,40.9059639,-123.8153381,Arcata,USGS & DWR,,Humboldt,O'kane (blue Lake),850
+ORK,Redwood Cr,North Coast,41.2992897,-124.0511856,Orick,USGS & DWR,,Humboldt,Redwood Creek At Orick,36
+MRF,Mad R,North Coast,40.2843132,-123.3353043,Forest Glen,USGS,,Trinity,Mad R Abv Ruth Reservoir Nr Forest Glen,2700
+ARC,Mad R,North Coast,40.90985107,-124.0606155,Arcata,USGS & DWR,,Humboldt,Mad River Near Arcata,33
+FSW,Eel R,North Coast,40.21820068,-123.6325302,Fort Seward,USGS & DWR,,Humboldt,Eel River At Fort Seward,320
+SCO,Eel R,North Coast,40.49152374,-124.0997696,Scotia,USGS & DWR,,Humboldt,Eel River At Scotia,160
+EVA,Eel R,North Coast,39.3886,-123.115,Potter Valley,PG&E,,Mendocino,Eel River Below Van Arsdale Dam 24hr Avg,1400
+MRD,Eel R,North Coast,40.18180847,-123.7761459,Miranda,USGS & DWR,,Humboldt,Eel River Sf Nr Miranda (at Sylvandale),218
+LRT,Eel R,North Coast,41.00984955,-124.081459,Trinidad,USGS,,Humboldt,Little River Near Trinidad,18
+DOS,Eel R,North Coast,39.70626831,-123.3252945,Laytonville,USGS,,Mendocino,Middle Fork Eel River Near Dos Rios,900
+LEG,Eel R,North Coast,39.87459564,-123.7205811,Garberville,USGS & DWR,,Mendocino,South Fork Eel River At Leggett,747
+BRI,Van Duzen R,North Coast,40.48041534,-123.8908768,Scotia,USGS & DWR,,Humboldt,Van Duzen R Nr Bridgeville At Grizzly Cr,358
+MRE,Mattole R,North Coast,40.13930893,-123.9914246,Ettersburg,USGS,,Humboldt,Mattole River Near Ettersburg,626
+PTA,Mattole R,North Coast,40.31319046,-124.2833786,Rio Dell,USGS,,Humboldt,Mattole River Near Petrolia,40
+DGY,Russian R,North Coast,38.6986,-122.9569,Geyserville,USACE,,Sonoma,Dry Ck Nr Geyserville,156
+DRY,Russian R,North Coast,38.58740997,-122.8622131,Healdsburg,USGS,,Sonoma,Dry Creek Near Healdsburg,90
+CDM,Russian R,North Coast,39.1975,-123.1864,Ukiah,USACE,,Mendocino,Ef Russian R Blw Coyote Dam,614
+RRU,Russian R,North Coast,39.1956,-123.1939,Ukiah,USACE,Satellite,Mendocino,Russian R Nr Ukiah,599
+CLV,Russian R,North Coast,38.87934875,-123.0536118,Cloverdale,DWR/Flood Management,,Mendocino,Russian River At Cloverdale,107
+HAC,Russian R,North Coast,38.50852203,-122.9277725,Hacienda,USGS & DWR,,Sonoma,Russian River Near Hacienda Bridge,20
+HEA,Russian R,North Coast,38.6132431,-122.83638,Healdsburg,USGS & DWR,,Sonoma,Russian River Near Healdsburg,108
+HOP,Russian R,North Coast,39.02656174,-123.1305618,Hopland,USGS/USACE,,Mendocino,Russian River Near Hopland,498
+NRN,Navarro River,North Coast,39.17045593,-123.6680679,Navarro,USGS,,Mendocino,Navarro River Near Navarro,5
+NAP,Napa R,San Francisco Bay,38.36824417,-122.3033066,Napa,USGS & DWR,,Napa,Napa River Near Napa,25
+STH,Napa R,San Francisco Bay,38.51129913,-122.4558105,St Helena,USGS,,Napa,Napa River Near St Helena,195
+AVL,East Bay,San Francisco Bay,37.62326431,-121.7588425,Livermore,USGS,,Alameda,Arroyo Valle Nr Livermore,510
+SRN,East Bay,San Francisco Bay,37.77306,-121.99361,San Ramon,USGS,Satellite,Contra Costa,San Ramon Ck At San Ramon,530
+ALN,Alameda Cr,San Francisco Bay,37.5871582,-121.9607925,Niles,USGS,,Alameda,Alameda Ck Nr Niles,86
+GRJ,Guadalupe R,San Francisco Bay,37.37382889,-121.9330139,San Jose,USGS,,Santa Clara,Guadalupe R Abv Hwy 101 At San Jose,72
+GUD,Guadalupe R,San Francisco Bay,37.280748,-121.880233,San Jose,Santa Clara Valley Water District,Satellite,Santa Clara,Guadalupe R-san Jose At Almaden Expressw,150
+SBH,San Benito R,Central Coast,36.85189819,-121.4299393,Hollister,USGS,,San Benito,San Benito R At Hwy 156 Near Hollister,260
+CHT,Pajaro R,Central Coast,36.90023041,-121.5977249,Chittenden,USGS & DWR,,Santa Cruz,Pajaro River At Chittenden,82
+ASS,Salinas R,Central Coast,36.28052139,-121.3227081,Soledad,USGS,,Monterey,Arroyo Seco Nr Soledad,399
+EST,Salinas R,Central Coast,35.717,-120.639,Paso Robles,USGS & DWR,,San Luis Obispo,Estrella River Near Estrella,672
+PAS,Salinas R,Central Coast,35.628582,-120.6843338,Paso Robles,USGS & DWR,,San Luis Obispo,Salinas River At Paso Robles,700
+BRA,Salinas R,Central Coast,35.93024445,-120.8687897,Bradley,USGS & DWR,,Monterey,Salinas River Near Bradley,443
+SPR,Salinas R,Central Coast,36.63106918,-121.6724472,Salinas,USGS & DWR,,Monterey,Salinas River Near Spreckels,53
+GRY,Sisquoc R,Central Coast,34.83970261,-120.1682053,Garey,USGS,Satellite,Santa Barbara,Sisquoc River At Garey,354
+CSK,Santa Clara R,South Coast,34.6061,-118.6656,Castaic,DWR/O&M Southern Field Division,,Los Angeles,Castaic Canyon Ck Z3-2388,1651
+ECC,Santa Clara R,South Coast,34.576,-118.556,Castaic,DWR/O&M Southern Field Division,,Los Angeles,Elizabeth Canyon Ck,1680
+FCK,Santa Clara R,South Coast,34.60306,-118.66083,Castaic,DWR/O&M Southern Field Division,Satellite,Los Angeles,Fish Canyon Ck,1647
+ELF,Santa Clara R,Central Coast,34.403526,-118.739143,Piru,USGS,Satellite,Ventura,Santa Clara R At E La Falda Wy Nr Piru,710
+SSP,Santa Clara R,South Coast,34.44166183,-118.9273224,Fillmore,USGS,,Ventura,Sespe Creek Nr Fillmore,565
+PIR,Piru Cr,South Coast,34.665,-118.823,Fillmore,DWR,,Ventura,Piru Creek Blw Buck Cr Nr Pyramid Lake,2600
+FSN,San Diego R,South Coast,32.76504898,-117.1686478,San Diego,San Diego County,,San Diego,San Diego River At Fashion Valley,30
+BAT,Sacramento R,Sacramento River,40.39820862,-122.1463852,Red Bluff,USGS & DWR,,Tehama,Battle Creek,200
+BIC,Sacramento R,Sacramento River,39.76841736,-121.7786026,Chico,DWR/North Region ,,Butte,Big Chico Creek Near Chico,274
+BSL,Sacramento R,Sacramento River,39.17147446,-121.9016495,Meridian,DWR/North Region ,,Sutter,Butte Slough Nr Meridian,13
+IGO,Sacramento R,Sacramento River,40.51320648,-122.5241776,Redding,USGS & USBR,,Shasta,Clear Creek Near Igo,673
+CDR,Sacramento R,Sacramento River,39.19551086,-122.0605164,Colusa,DWR/North Region ,,Colusa,Colusa Drain Nr Hwy 20,60
+COW,Sacramento R,Sacramento River,40.50487518,-122.2330551,Redding,USGS & DWR,,Shasta,Cow Creek Near Millville,385
+DVD,Sacramento R,Sacramento River,39.96361542,-122.0343628,Vina,DWR/North Region ,,Tehama,Deer Creek Below Stanford Vina Dam,335
+DCV,Sacramento R,Sacramento River,40.01404572,-121.9483185,Vina,USGS,,Tehama,Deer Creek Nr Vina,479
+DLC,Sacramento R,Sacramento River,38.245,-121.505,Walnut Grove,USGS,,Sacramento,Delta Cross Channel Btw Sac R & Snodgras,10
+ECP,Sacramento R,Sacramento River,40.02376556,-122.5119476,Paskenta,USGS,,Tehama,Elder Creek Near Paskenta,718
+GSS,Sacramento R,Sacramento River,38.237,-121.518,Walnut Grove,USGS,,Sacramento,Georgiana Slough At Sacramento River,10
+KCK,Sacramento R,Sacramento River,39.00839996,-122.8392181,Kelseyville,DWR/North Region ,,Lake,Kelsey Ck Blw Kelseyville,1345
+LIB,Sacramento R,Sacramento River,38.2421,-121.6849,Rio Vista,USGS,,Solano,Liberty Island @ Approx Cntr S End,0
+LCH,Sacramento R,Sacramento River,39.74916077,-121.8688965,Chico,DWR/North Region ,,Butte,Lindo Channel Nr Chico,183
+MCU,Sacramento R,Sacramento River,39.18255234,-122.9118423,Upper Lake,DWR/North Region ,Satellite,Lake,Middle Ck Nr Upper Lake,1360
+MCH,Sacramento R,Sacramento River,40.04005814,-122.1046295,Los Molinos,DWR/North Region ,,Tehama,Mill Creek Below Hwy 99,230
+MLM,Sacramento R,Sacramento River,40.05460358,-122.0241547,Los Molinas,USGS,,Tehama,Mill Creek Nr Los Molinos,385
+HWB,Sacramento R,Sacramento River,38.2917,-121.6308,Oxford,USGS,,Solano,Miner Slough At Hwy 84 Bridge,0
+MIR,Sacramento R,Sacramento River,38.236027,-121.666055,Rio Vista,DWR/North Central Region ,Data Xchg-dwr Ncro,Solano,Miner Slough Near Sacramento River,5
+MFR,Sacramento R,Sacramento River,38.4985199,-121.4527283,Florin,USGS,,Sacramento,Morrison Creek At Florin Road,20
+MUC,Sacramento R,Sacramento River,39.78335571,-121.8867188,Chico,DWR/North Region ,,Butte,Mud Creek Near Chico,170
+NSL,Sacramento R,Sacramento River,38.1221,-121.8881,Bird's Landing,DWR/Division of Environmental Service,,Solano,National Steel,0
+BTW,Sacramento R,Sacramento River,40.4204,-121.961233,Manton,PG&E,Data Xchg-pge,Tehama,Nf Battle Ck Blw Div To Wildcat Canal,1200
+BNF,Sacramento R,Sacramento River,40.42433167,-121.9869461,Cottonwood,DWR/North Region ,,Tehama,North Fork Battle Creek Near Manton,998
+RCS,Sacramento R,Sacramento River,38.79355621,-121.7253494,Knights Landing,DWR/North Central Region ,,Yolo,Ridge Cut Slough At Knights Landing,0
+DWS,Sacramento R,Sacramento River,38.25611,-121.66667,West Sacramento,USGS,,Yolo,Sacramento Deep Water Shipping Channel,0
+FRE,Sacramento R,Sacramento River,38.75925827,-121.6672745,Woodland,DWR/North Central Region ,,Yolo,Sacramento R @ Fremont Weir(crest 32.0'),40
+SDC,Sacramento R,Sacramento River,38.257,-121.518,Walnut Grove,USGS,,Sacramento,Sacramento R Above Delta Cross Channel,10
+HMC,Sacramento R,Sacramento River,39.75092316,-121.997879,Hamilton City,DWR/North Region ,,Glenn,Sacramento R At Hamilton City-main Ch,145
+ORD,Sacramento R,Sacramento River,39.62813187,-121.9931793,Chico,DWR/North Region ,,Glenn,Sacramento R At Ord Ferry-main Channel,115
+SOI,Sacramento R,Sacramento River,38.17548,-121.656863,Rio Vista,DWR/North Central Region ,Data Xchg-dwr Ncro,Sacramento,Sacramento R Downstream Of Isleton,5
+BND,Sacramento R,Sacramento River,40.28848648,-122.1866608,Red Bluff,USGS & USBR,,Tehama,Sacramento River At Bend Bridge,286
+BTC,Sacramento R,Sacramento River,39.45783997,-121.9941635,Butte City,DWR/North Region ,,Glenn,Sacramento River At Butte City,99
+COL,Sacramento R,Sacramento River,39.21405792,-122.0002518,Colusa,USGS & DWR,,Colusa,Sacramento River At Colusa,-3
+DLT,Sacramento R,Sacramento River,40.93959427,-122.4172363,Delta,USGS & USBR,,Shasta,Sacramento River At Delta,1075
+FPT,Sacramento R,Sacramento River,38.45,-121.5,Freeport,USGS,,Sacramento,Sacramento River At Freeport,0
+IST,Sacramento R,Sacramento River,38.58867264,-121.5049667,Sacramento,DWR/North Central Region ,Satellite,Sacramento,Sacramento River At I Street Bridge,27
+KWK,Sacramento R,Sacramento River,40.60098267,-122.444458,Redding,USGS & USBR,,Shasta,Sacramento River At Keswick,596
+SRV,Sacramento R,Sacramento River,38.16,-121.686,Rio Vista,USGS,,Solano,Sacramento River At Rio Vista (usgs),0
+VON,Sacramento R,Sacramento River,38.77415466,-121.5980682,Verona,USGS & DWR,,Sutter,Sacramento River At Verona,43
+VIN,Sacramento R,Sacramento River,39.90873718,-122.0924683,Corning,DWR/North Region ,,Tehama,Sacramento River At Vina Bridge-main Ch,185
+GES,Sacramento R,Sacramento River,38.2389,-121.5234,Walnut Grove,USGS,,Sacramento,Sacramento River Below Georgiana Slough,0
+WLK,Sacramento R,Sacramento River,39.00989532,-121.8246918,Yuba City,USGS,,Sutter,Sacramento River Below Wilkins Slough,30
+SCS,Sacramento R,Sacramento River,39.09544754,-122.9610443,Lakeport,DWR/North Region ,,Lake,Scotts Ck Nr Lakeport,1400
+BTB,Sacramento R,Sacramento River,40.40251,-121.969078,Dales,PG&E,Data Xchg-pge,Tehama,Sf Battle Ck Blw Div To Coleman Canal,1160
+SGG,Sacramento R,Sacramento River,38.3183333,-121.6930556,Courtland,USGS,Data Xchg-usgs,Solano,Shag Slough,0
+BAS,Sacramento R,Sacramento River,40.40580368,-121.9806747,Manton,DWR/North Region ,,Tehama,South Fork Battle Creek Near Manton,997
+SSS,Sacramento R,Sacramento River,38.285,-121.587,Oxford,USGS,,Sacramento,Steamboat Slough Btw Sac R And Sutter Sl,10
+SXS,Sacramento R,Sacramento River,38.191267,-121.637881,Rio Vista,DWR/North Central Region ,Data Xchg-dwr Ncro,Sacramento,Steamboat Slough Nr Sacramento R,5
+SUT,Sacramento R,Sacramento River,38.3286,-121.5772,Courtland,USGS,,Sacramento,Sutter Slough At Courtland,0
+THO,Sacramento R,Sacramento River,39.88784027,-122.5285645,Paskenta,DWR/North Region ,,Tehama,Thomes Creek At Paskenta,720
+TSL,Sacramento R,Sacramento River,38.1033,-121.6861,Antioch,USGS & DWR,,Sacramento,Threemile Slough At San Joaquin River,10
+WSL,Sacramento R,Sacramento River,38.91458893,-121.6275558,Nicolaus,DWR/North Region ,,Sutter,Willow Slough At Sb West Burrow Pit,28
+LIS,Sacramento R,Sacramento River,38.47478104,-121.5882263,Freeport,DWR/North Central Region ,,Yolo,Yolo Bypass At Lisbon,0
+YBY,Sacramento R,Sacramento River,38.67768097,-121.6441269,Yolo,USGS,,Yolo,Yolo Bypass Near Woodland,-3
+MCA,Mc Cloud R,Sacramento River,41.1105,-122.0967,Dunsmuir,PG&E,,Shasta,Mccloud R At Ah-di-na,2130
+MSS,Mc Cloud R,Sacramento River,40.958,-122.219,Redding,PG&E,,Shasta,Mccloud River Above Shasta Lake,1100
+MC7,Mc Cloud R,Sacramento River,41.122349,-122.064163,Mccloud,PG&E,Data Xchg-pge,Shasta,Mccloud River Below Mccloud Dam,2400
+MCD,Mc Cloud R,Sacramento River,41.186,-122.059,Mccloud,PG&E,,Siskiyou,Mccloud River Near Mccloud,2711
+PRB,Pit R,Sacramento River,41.02,-121.909,Big Bend,PG&E,,Shasta,Ph-27 Pit River At Big Bend,1680
+PR4,Pit R,Sacramento River,40.975,-121.779,Burney,PG&E,,Shasta,Ph-30 Pit River Blw Pit No 4 Dam,2360
+PP1,Pit R,Sacramento River,40.98321915,-121.5119247,Fall River Mills,USGS,,Shasta,Pit R Below Pit #1 Ph Near Fall R Mills,2798
+P35,Pit R,Sacramento River,41.021294,-121.675692,Burney,PG&E,Data Xchg-pge,Shasta,Pit River Below Lake Britton,2750
+PCN,Pit R,Sacramento River,41.40600204,-120.927742,Canby,USGS,,Modoc,Pit River Near Canby,4266
+PMN,Pit R,Sacramento River,40.843,-122.016,Burney,USBR,,Shasta,Pit River Near Montgomery Creek,1036
+PLK,Pit R,Sacramento River,41.23072815,-120.4371719,Likely,USGS,,Modoc,Sf Pit River Near Likely,4508
+HCB,Hat Cr,Sacramento River,40.86252213,-121.5523071,Burney,DWR/North Region ,,Shasta,Hat Ck Blw Hat Ck,3284
+HCN,Hat Cr,Sacramento River,40.6891098,-121.4227829,Burney,DWR/North Region ,,Shasta,Hat Ck Nr Hat Ck,4274
+CHC,Cottonwood Cr,Sacramento River,39.46470261,-121.7447357,Richvale,DWR/North Region ,,Butte,Cherokee Canal Nr Richvale,106
+CWA,Cottonwood Cr,Sacramento River,40.38709641,-122.2386093,Cottonwood,USGS,,Tehama,Cottonwood Creek Auxiliary Gage,364
+BCK,Butte Cr,Sacramento River,39.72599411,-121.7088623,Chico,USGS,,Butte,Butte Creek Nr Chico,300
+BCD,Butte Cr,Sacramento River,39.67801285,-121.7774811,Durham,DWR/North Region ,,Butte,Butte Creek Nr Durham,190
+BBW,Butte Cr,Sacramento River,39.88573074,-121.6103287,Chico,DWR/North Region ,,Butte,Bw-12 Import To Butte Creek,2882
+BPD,Butte Cr,Sacramento River,39.70890427,-121.7541885,Chico,DWR/North Region ,,Butte,Parrot Div From Butte Creek,269
+RBW,Stony Cr,Sacramento River,39.371,-122.605,Colusa,USBR,,Colusa,Rainbow Diversion Dam,1297
+SCG,Stony Cr,Sacramento River,39.73181,-122.413997,Orland,USBR,Satellite,Glenn,Stony Ck Nr Grizzly Flat (co Rd 200a),496
+FSB,Feather R,Sacramento River,39.04549789,-121.6104355,Yuba City,DWR/North Central Region ,,Sutter,Feather R At Boyd's Lndng Abv Star Bend,50
+MER,Feather R,Sacramento River,39.709,-121.27,Oroville,DWR/Operations & Maintenance,,Butte,Feather River At Merrimac,1560
+GRL,Feather R,Sacramento River,39.36657715,-121.6473694,Gridley,DWR/Operations & Maintenance,,Butte,Feather River Near Gridley,92
+ICR,Feather R,Sacramento River,40.056,-120.962,Crescent Mills,DWR,,Plumas,Indian Creek Below Indian Falls,3100
+MFP,Feather R,Sacramento River,39.81895065,-120.4448776,Portola,DWR/North Region ,,Plumas,Middle Fork Feather River Near Portola,4850
+NHC,Feather R,Sacramento River,39.309308,-121.59518,Live Oak,DWR/North Central Region ,Satellite,Yuba,N Honcut Ck At Hwy 70,74
+F70,Feather R,Sacramento River,40.071388,-121.163612,Belden,PG&E,Data Xchg-pge,Plumas,Nf Feather R Below Belden Dam,2811
+F56,Feather R,Sacramento River,39.852501,-121.391388,Storrie,PG&E,Data Xchg-pge,Butte,Nf Feather R Bl Grizzly Creek,1465
+F57,Feather R,Sacramento River,39.979721,-121.275833,Belden,PG&E,Data Xchg-pge,Plumas,Nf Feather R Bl Rock Creek Div Dam,2080
+NFP,Feather R,Sacramento River,39.794,-121.451,Pulga,PG&E,Data Xchg-pge,Butte,North Fork Feather River At Pulga,1305
+SFH,Feather R,Sacramento River,39.36824036,-121.3718796,Bangor,DWR/North Central Region ,,Butte,South Honcut Creek Near Bangor,630
+SPK,Feather R,Sacramento River,40.00294876,-120.9543991,Quincy,USGS,,Plumas,Spanish Ck Abv Blackhawk Ck At Keddie,3130
+WFR,Feather R,Sacramento River,39.81398392,-121.5711823,Magalia,DWR/North Region ,,Butte,West Branch Feather River Near Magalia,1380
+DCS,Yuba R,Sacramento River,39.22433853,-121.2685699,Smartville,USGS,,Nevada,Deer Creek Nr Smartville,630
+ORH,Yuba R,Sacramento River,39.412,-120.997,North San Juan,Yuba County,,Yuba,Middle Yuba River Below Our House Dam,1958
+GYB,Yuba R,Sacramento River,39.52489471,-120.9380035,Downieville,USGS,,Sierra,N Yuba R Blw Goodyears Bar,2453
+NYS,Yuba R,Sacramento River,39.5247,-121.0906,Strawberry,Yuba County Water Agency,,Yuba,N Yuba R. Abv Slate Ck Nr Strawberry,2000
+LCB,Yuba R,Sacramento River,39.445,-121.058,North San Juan,Yuba County,,Yuba,Oregon Creek Below Log Cabin,1913
+JBR,Yuba R,Sacramento River,39.292,-121.104,North San Juan,Yuba County,,Nevada,Yuba River At Jones Bar,1060
+YPB,Yuba R,Sacramento River,39.2306,-121.2817,Smartville,DWR,,Yuba,Yuba River At Parks Bar Bridge,0
+MRY,Yuba R,Sacramento River,39.17572403,-121.5249634,Marysville,USGS,,Yuba,Yuba River Near Marysville,88
+YRS,Yuba R,Sacramento River,39.23517227,-121.2741241,Smartville,PG&E,,Yuba,Yuba River Near Smartville,280
+BPG,Bear R,Sacramento River,38.98409653,-121.4879761,Pleasant Grove,DWR/North Region ,,Sutter,Bear River At Pleasant Grove Rd,75
+BRW,Bear R,Sacramento River,38.99992752,-121.4073105,Wheatland,USGS & DWR,,Placer,Bear River Near Wheatland,72
+CBR,American R,Sacramento River,38.772,-120.816,Placerville,"Pacific Gas & Electric Company, Auburn",,El Dorado,American River At Chili Bar,931
+AFO,American R,Sacramento River,38.6354599,-121.2277298,Fair Oaks,USGS,,Sacramento,American River At Fair Oaks,72
+AMK,American R,Sacramento River,38.764,-120.325,Kyburz,USGS,,El Dorado,American Sf Nr Kyburz,3840
+ACK,American R,Sacramento River,38.6416,-121.3825,Sacramento,USGS,,Sacramento,Arcade Ck Nr Del Paso Hts,50
+LON,American R,Sacramento River,38.983,-120.323,Meeks Bay,SMUD,,El Dorado,Loon Lake (smud),6410
+OXB,American R,Sacramento River,39.006,-120.76,Foresthill,PCWA,,Placer,Middle Fk American R Nr Oxbow Ph,1070
+NFD,American R,Sacramento River,38.93600845,-121.0238342,Auburn,USGS,,Placer,Nf American R At North Fork Dam,715
+RBG,American R,Sacramento River,38.955,-120.401,Kyburz,SMUD,Data Xchg-smud,El Dorado,Sf Rubicon River Below Gerle Ck,4970
+SVC,American R,Sacramento River,38.824,-120.538,Pollock Pines,SMUD,,El Dorado,Silver Cr Blw Camino Dam,1863
+BRK,Cache Cr,Sacramento River,38.95755386,-122.3427505,Rumsey,USGS,,Colusa,Bear Ck Ab Holsten Cyn Nr Rumsey,920
+RUM,Cache Cr,Sacramento River,38.89,-122.238,Woodland,USGS & DWR,,Yolo,Cache Creek At Rumsey Bridge,400
+CCY,Cache Cr,Sacramento River,38.72663498,-121.8071518,Yolo,USGS,,Yolo,Cache Creek At Yolo,86
+RYF,Cache Cr,Sacramento River,38.193854,-121.658005,Rio Vista,USGS,Data Xchg-usgs,Solano,Cache Slough Above Ryer Island Ferry,2
+NCL,Cache Cr,Sacramento River,39.16556,-122.61889,Clearlake Oaks,USGS,Satellite,Lake,N Fk Cache Ck Nr Clearlake Oaks 8ne,1840
+NFC,Cache Cr,Sacramento River,39.16544724,-122.6199875,,USGS,,Lake,N Fork Cache Creek At Hough Springs,1534
+PCG,Putah Cr,Sacramento River,38.77878952,-122.5174789,Coyote Valley,USGS,,Lake,Putah Creek Near Guenoc,914
+PUT,Putah Cr,Sacramento River,38.51518631,-122.0819168,Winters,USGS,,Yolo,Putah Creek Near Winters,161
+FAL,Delta,San Joaquin River,38.0558,-121.6669,Oakley,USGS & DWR,,Contra Costa,False River Near Oakley,0
+JTR,Delta,San Joaquin River,37.9224,-121.5182,Stockton,DWR/North Central Region ,,San Joaquin,Jones Tract,-19
+MDM,Delta,San Joaquin River,37.943,-121.534,Knightsen,USGS,,San Joaquin,Middle River At Middle River,10
+OMR,Delta,San Joaquin River,37.97,-121.5711,,DWR/Operations & Maintenance,Computed,San Joaquin,Old & Middle Rvrs Tidally Filtered Est,10
+OBI,Delta,San Joaquin River,37.96936798,-121.5722198,Brentwood,USGS & DWR,,San Joaquin,Old River At Bacon Island (usgs),10
+ODM,Delta,San Joaquin River,37.8102951,-121.5421448,Tracy,USGS & DWR,,San Joaquin,Old River At Delta Mendota Canal,10
+OSJ,Delta,San Joaquin River,38.0711,-121.5789,Terminous,USGS & DWR,,San Joaquin,Old River At Franks Tract Near Terminous,0
+OH4,Delta,San Joaquin River,37.891109,-121.569168,Byron,USGS,,Contra Costa,Old River At Highway 4,10
+OLD,Delta,Sacramento River,37.80480957,-121.4495621,Tracy,DWR/Operations & Maintenance,,San Joaquin,Old River Near Tracy,5
+VCU,Delta,San Joaquin River,37.8717,-121.5283,Stockton,USGS & DWR,,San Joaquin,Victoria Canal Near Byron,0
+CMF,Cosumnes R,San Joaquin River,38.6245079,-120.7024536,Somerset,DWR/North Central Region ,,El Dorado,Cosumnes R Mid Fork Nr Somerset,1648
+CNF,Cosumnes R,San Joaquin River,38.58903122,-120.8444901,El Dorado,DWR/North Central Region ,,El Dorado,Cosumnes R N Fork Nr El Dorado,840
+MHB,Cosumnes R,San Joaquin River,38.50018692,-121.0452194,Jackson,USGS,,Sacramento,Cosumnes River At Michigan Bar,168
+MOK,Mokelumne R,San Joaquin River,38.1061,-121.5711,Isleton,USGS & DWR,,San Joaquin,Mokelumne R At San Joaquin River,0
+M38,Mokelumne R,San Joaquin River,38.446667,-120.489166,West Point,PG&E,Data Xchg-pge,Amador,Nf Mokelumne R Ab Tiger Creek,2338
+M46,Mokelumne R,San Joaquin River,38.420834,-120.548889,West Point,PG&E,Data Xchg-pge,Amador,Nf Mokelumne R Bl Electra Diversion,1980
+M11,Mokelumne R,San Joaquin River,38.49361,-120.220001,Pioneer,PG&E,Data Xchg-pge,Calaveras,Nf Mokelumne R Bl Salt Springs Dam,3590
+MBT,Mokelumne R,San Joaquin River,38.440277,-120.503891,West Point,PG&E,Data Xchg-pge,Amador,Nf Mokelumne R Bl Tiger Creek Afterbay,2220
+MRS,Calaveras R,San Joaquin River,38.054,-121.012,Bellota,USACE,,Calaveras,Mormon Slough At Bellota (usace),130
+BCC,Stanislaus R,San Joaquin River,37.96103668,-120.6152039,Copperopolis,USGS,,Calaveras,Black Creek Nr Copperopolis,746
+S52,Stanislaus R,San Joaquin River,38.297501,-119.74028,Dardanelle,PG&E,Data Xchg-pge,Tuolumne,Mf Stanislaus R At Kennedy Meadows,6326
+S12,Stanislaus R,San Joaquin River,38.183056,-120.157776,Avery,PG&E,Data Xchg-pge,Tuolumne,Mf Stanislaus R Bl Sandbar Div Dam,2720
+AVY,Stanislaus R,San Joaquin River,38.243889,-120.290001,Avery,Northern California Power Agency,Data Xchg-ncpa,Calaveras,North Fork Stanislaus Near Avery,3388
+NSD,Stanislaus R,San Joaquin River,38.434,-120.018,Arnold,Northern California Power Agency,Data Xchg-ncpa,Calaveras,North Fork Stanislaus R Blw Diversion,6640
+S61,Stanislaus R,San Joaquin River,38.197498,-120.0075,Strawberry,PG&E,Data Xchg-pge,Tuolumne,Sf Stanislaus R At Strawberry,5235
+S83,Stanislaus R,San Joaquin River,38.177776,-120.04583,Strawberry,PG&E,Data Xchg-pge,Tuolumne,Sf Stanislaus R Nr Strawberry Div Dam,4915
+KOT,Stanislaus R,San Joaquin River,37.69978,-121.170194,Modesto,DWR/South Central Region ,Satellite,Stanislaus,Stanislaus R At Koetitz Ranch,54
+OBB,Stanislaus R,San Joaquin River,37.783,-120.75,Oakdale,DWR/South Central Region ,,Stanislaus,Stanislaus R At Orange Blossom Bridge,117
+RIP,Stanislaus R,San Joaquin River,37.7296524,-121.1104965,Ripon,USGS,,San Joaquin,Stanislaus River At Ripon,73
+CBD,Tuolumne R,San Joaquin River,37.89020157,-119.969902,Mather,USGS,,Tuolumne,Cherry Ck Bl Dion R Ph Nr Mather,2150
+CBV,Tuolumne R,San Joaquin River,37.96770096,-119.9174042,Mather,USGS,,Tuolumne,Cherry Ck Bl Valley Dam Nr Hetch Hetchy,4337
+CEI,Tuolumne R,San Joaquin River,37.89436722,-119.9626846,Mather,USGS,,Tuolumne,Cherry Creek Near Early Intake,2272
+DCM,Tuolumne R,San Joaquin River,37.657,-120.923,Modesto,DWR/South Central Region ,,Stanislaus,Dry Creek At Modesto At Claus Road,88
+ECK,Tuolumne R,San Joaquin River,37.96908951,-119.8821259,Mather,USGS,,Tuolumne,Eleanor Ck Nr Hetch Hetchy,4500
+FHH,Tuolumne R,San Joaquin River,37.9708,-119.7633,Mather,City & County of San Francisco,,Tuolumne,Falls Ck Nr Hetch Hetchy,5350
+MTO,Tuolumne R,San Joaquin River,37.8283,-120.1081,Groveland,City & County of San Francisco,,Tuolumne,Mf Tuolumne R Nr Oakland Rec Camp,2800
+STO,Tuolumne R,San Joaquin River,37.8217,-120.0119,Groveland,City & County of San Francisco,,Tuolumne,Sf Tuolumne R Nr Oakland Rec Camp,2800
+TUM,Tuolumne R,San Joaquin River,37.873,-119.35,Tuolumne Meadows,DWR,,Tuolumne,Tuolumne Meadows,8600
+TAI,Tuolumne R,San Joaquin River,37.87936783,-119.9471283,Mather,USGS,,Tuolumne,Tuolumne R Abv Early Intake Near Mather,2420
+TGC,Tuolumne R,San Joaquin River,37.91658783,-119.6598969,Yosemite,USGS,,Tuolumne,Tuolumne R At The Grand Cyn Of Tuolumne,3830
+TRW,Tuolumne R,San Joaquin River,37.6336,-120.76556,Waterford,DWR/South Central Region ,Satellite,Stanislaus,Tuolumne R At Waterford,100
+TBI,Tuolumne R,San Joaquin River,37.8815918,-119.9701843,Mather,USGS,,Tuolumne,Tuolumne R Bl Early Intake Near Mather,2200
+LGN,Tuolumne R,San Joaquin River,37.6663208,-120.4421387,La Grange,USGS,,Stanislaus,Tuolumne R Blw La Grange Dam Nr La Grang,170
+MOD,Tuolumne R,San Joaquin River,37.62687683,-120.9879913,Modesto,USGS,Satellite,Stanislaus,Tuolumne River At Modesto,90
+TRH,Tuolumne R,San Joaquin River,37.93741989,-119.798233,Mather,USGS,,Tuolumne,Tuolumne River Near Hetch Hetchy,3430
+UCC,Tuolumne R,San Joaquin River,38.031331,-119.901417,Hetch Hetchy,San Francisco County,Satellite,Tuolumne,Upper Cherry Ck,4750
+BGF,Merced R,San Joaquin River,37.46944,-119.61417,Fish Camp,Madera Irrigation District,Satellite,Mariposa,Big Ck Diversion Nr Fish Camp,5400
+BDV,Merced R,San Joaquin River,37.3328,-120.3944,Planada,USACE,,Merced,Black Rascal Diversion,183
+DSN,Merced R,San Joaquin River,37.555,-120.463,Snelling,Merced Irrigation District,Satellite,Merced,Dry Creek Nr Snelling,230
+AMR,Merced R,San Joaquin River,37.46806,-120.53889,Snelling,Merced Irrigation District,Satellite,Merced,Merced R At Amsterdam Rd,173
+HIB,Merced R,San Joaquin River,37.73159409,-119.5587769,Yosemite,USGS,,Mariposa,Merced R At Happy Isles Br Nr Yosemite,4016
+H59,Merced R,San Joaquin River,37.47028,-120.5,Snelling,Merced Irrigation District,Satellite,Merced,Merced R At Hwy 59 (mid),210
+POH,Merced R,San Joaquin River,37.71687317,-119.666275,Yosemite,USGS,,Mariposa,Merced R At Pohono Br Nr Yosemite,3862
+MBN,Merced R,San Joaquin River,37.45417,-120.60778,Cressy,Merced Irrigation District,Satellite,Merced,Merced R At Shaffer Bridge Nr Cressy,117
+MBH,Merced R,San Joaquin River,37.515,-120.37,Snelling,Merced Irrigation District,Satellite,Merced,Merced R Blw Crocker-huffman Dam,294
+CRS,Merced R,San Joaquin River,37.425,-120.663,Cressy,DWR/South Central Region ,,Merced,Merced River At Cressy,165
+MMF,Merced R,San Joaquin River,37.522,-120.331,Snelling,Merced Irrigation District,,Merced,Merced River Below Merced Falls,310
+MBB,Merced R,San Joaquin River,37.5989,-119.9781,Briceburg,Merced Irrigation District,,Mariposa,Merced River Near Briceburg,1150
+MSN,Merced R,San Joaquin River,37.502,-120.451,Snelling,DWR/South Central Region ,,Merced,Merced River Near Snelling,260
+MST,Merced R,San Joaquin River,37.371,-120.931,Stevinson,DWR/South Central Region ,,Merced,Merced River Near Stevinson,82
+SMW,Merced R,San Joaquin River,37.5417,-119.6722,Wawona,Merced Irrigation District,,Mariposa,South Fork Merced River At Wawona,3960
+FHL,Fresno R,San Joaquin River,37.1506,-119.8561,Madera,USACE,,Madera,Fresno R Abv Henley Lake,540
+FRU,Fresno R,San Joaquin River,37.345,-119.6392,Oakhurst,DWR/South Central Region ,Satellite,Madera,Fresno R Lewis Fork Nr Oakhurst,2295
+BSD,San Joaquin R,San Joaquin River,37.2547,-120.7194,Madera,DWR/South Central Region ,,Madera,Bear Ck Blw Eastside Canal,95
+MCK,San Joaquin R,San Joaquin River,37.3092,-120.4456,Planada,USACE,,Merced,Bear Creek At Mc Kee Road,167
+CBP,San Joaquin R,San Joaquin River,36.774,-120.285,Mendota,San Luis Delta-Mendota Water Authority,,Madera,Chowchilla Bypass,170
+DAR,San Joaquin R,Sacramento River,37.768959,-121.419414,Tracey,DWR/North Central Region ,Satellite,San Joaquin,Drainage At Arbor Road,20
+DSJ,San Joaquin R,San Joaquin River,38.013,-121.671,Oakley,USGS,,Contra Costa,Dutch Slough At Jersey Island,10
+EBM,San Joaquin R,San Joaquin River,37.205,-120.6981,Merced,DWR/South Central Region ,,Merced,Eastside Bypass Blw Mariposa Bypass,115
+ELN,San Joaquin R,San Joaquin River,37.1475,-120.6053,Merced,DWR/Flood Management,,Merced,Eastside Bypass Near El Nido,100
+FCT,San Joaquin R,San Joaquin River,38.067822,-121.648838,Antioch,DWR/North Central Region ,Data Xchg-dwr Ncro,San Joaquin,Fishermans Cut,4
+GLC,San Joaquin R,San Joaquin River,37.8196,-121.5485,Tracy,USGS & DWR,,San Joaquin,Grantline Canal (usgs),10
+HOL,San Joaquin R,San Joaquin River,38.0164,-121.5819,Bethel Island,USGS & DWR,,San Joaquin,Holland Cut Near Bethel Island,0
+JBP,San Joaquin R,San Joaquin River,36.653,-120.18,San Joaquin,Reclamation District 1606,,Fresno,James Bypass,170
+LDC,San Joaquin R,San Joaquin River,36.934193,-119.729557,Fresno,USBR,,Fresno,Little Dry Creek (usbr),350
+LPS,San Joaquin R,San Joaquin River,38.0964,-121.4961,Terminous,USGS,,San Joaquin,Little Potato Slough At Terminous,0
+MAB,San Joaquin R,San Joaquin River,37.88518143,-121.4727631,Stockton,DWR/North Central Region ,Data Xchg-dwr Ncro,San Joaquin,Middle River Above Barrier,7
+MRU,San Joaquin R,San Joaquin River,37.8339,-121.386,Lathrop,DWR/North Central Region ,Data Xchg-dwr Ncro,San Joaquin,Middle River At Undine Road,0
+HLT,San Joaquin R,San Joaquin River,38.0031,-121.5108,Holt,USGS & DWR,,San Joaquin,Middle River Near Holt,0
+MSG,San Joaquin R,San Joaquin River,37.2625,-120.9056,Gustine,USGS,,Merced,Mud Slough Nr Gustine,70
+NFW,San Joaquin R,San Joaquin River,37.3978,-119.5592,Oakhurst,Madera Irrigation District,,Madera,N Fk Willow Ck Nr Sugar Pine,5200
+ORX,San Joaquin R,San Joaquin River,37.810997,-121.386576,Tracy,DWR/North Central Region ,Data Xchg-dwr Ncro,San Joaquin,Old River Above Doughty Cut,8
+ORI,San Joaquin R,San Joaquin River,37.828,-121.5526,Byron,DWR/North Central Region ,,Contra Costa,Old River At Clifton Court Intake,0
+OH1,San Joaquin R,San Joaquin River,37.80755234,-121.3312531,Tracy,DWR/North Central Region ,,San Joaquin,Old River At Head,15
+ORQ,San Joaquin R,San Joaquin River,38.0272,-121.5645,Bethel Island,USGS & DWR,,San Joaquin,Old River At Quimbly Is Near Bethel Is,0
+ORM,San Joaquin R,San Joaquin River,37.79384,-121.51738,Tracy,DWR/North Central Region ,Data Xchg-dwr Ncro,San Joaquin,Old River Upstream Of Mountain House Crk,5
+ORE,San Joaquin R,San Joaquin River,37.31549072,-121.125206,Newman,USGS,,Stanislaus,Orestimba Creek Nr Newman,0
+PDC,San Joaquin R,San Joaquin River,37.8020598,-121.4122564,Tracy,DWR/North Central Region ,Data Xchg-dwr Des,San Joaquin,Paradise Cut,8
+SSH,San Joaquin R,San Joaquin River,37.2478,-120.8511,Stevinson,USGS,,Merced,Salt Slough At Hwy 165 Nr Stevinson,75
+SMN,San Joaquin R,San Joaquin River,37.34721375,-120.976181,Newman,USGS,Satellite,Stanislaus,San Joaquin R Abv Merced R Nr Newman,60
+BDT,San Joaquin R,San Joaquin River,37.865,-121.3231,Lathrop,DWR/Operations & Maintenance,,San Joaquin,San Joaquin R At Brandt Bridge,0
+DNB,San Joaquin R,San Joaquin River,36.8335,-119.9658,Fresno,USBR,,Madera,San Joaquin R At Donny Bridge,239
+FFB,San Joaquin R,San Joaquin River,37.30994034,-120.9310379,Gustine,USGS,,Merced,San Joaquin R At Fremont Ford Bridge,65
+H41,San Joaquin R,Sacramento River,36.8762,-119.7932,Fresno,USBR,,Madera,San Joaquin R At Hwy 41,260
+MRB,San Joaquin R,San Joaquin River,37.6414,-121.2276,San Joaquin City,DWR,,Stanislaus,San Joaquin R At Maze Rd Bridge,39
+PRI,San Joaquin R,San Joaquin River,38.0594,-121.5572,Terminous,USGS,,San Joaquin,San Joaquin R At Prisoners Pt Nr Termino,0
+SKB,San Joaquin R,San Joaquin River,36.8229,-120.0884,Kerman,USBR,Satellite,Madera,San Joaquin R Blw Hwy 145 (skaggs Br),200
+SCL,San Joaquin R,San Joaquin River,37.43188095,-121.0138168,Crows Landing,USGS,,Stanislaus,San Joaquin R Nr Crows Landing,60
+SDP,San Joaquin R,San Joaquin River,36.994,-120.5015,Dos Palos,DWR,Satellite,Fresno,San Joaquin R Nr Dos Palos,116
+SWA,San Joaquin R,San Joaquin River,37.11532,-120.587,Merced,DWR/South Central Region ,,Merced,San Joaquin R Nr Washington Rd,109
+SJG,San Joaquin R,San Joaquin River,37.935,-121.329,Stockton,USGS,,San Joaquin,San Joaquin River At Garwood Bridge,13
+GRF,San Joaquin R,San Joaquin River,36.798,-120.16,Mendota,USBR,,Fresno,San Joaquin River At Gravelly Ford,170
+SJJ,San Joaquin R,San Joaquin River,38.052,-121.689,Oakley,USGS,,Contra Costa,San Joaquin River At Jersey Point (usgs),10
+MSD,San Joaquin R,San Joaquin River,37.786,-121.306,Manteca,DWR/Division of Environmental Service,,San Joaquin,San Joaquin River At Mossdale Bridge,31
+SJB,San Joaquin R,San Joaquin River,36.773,-120.286,Mendota,USBR,Satellite,Madera,San Joaquin River Below Bifurcation,170
+SJF,San Joaquin R,San Joaquin River,36.98439407,-119.7243118,Fresno,USGS,,Fresno,San Joaquin River Below Friant,294
+SJA,San Joaquin R,San Joaquin River,37.132,-119.531,Auberry,PG&E,,Fresno,San Joaquin River Near Auberry,870
+SJC,San Joaquin R,San Joaquin River,37.980266,-121.385717,Stockton,DWR/North Central Region ,Data Xchg-dwr Ncro,San Joaquin,San Joaquin River Near Buckley Cove,10
+MEN,San Joaquin R,San Joaquin River,36.81050491,-120.3782272,Mendota,USGS,,Fresno,San Joaquin River Near Mendota,170
+NEW,San Joaquin R,San Joaquin River,37.35049438,-120.97715,Newman,USGS,,Merced,San Joaquin River Near Newman,90
+SJP,San Joaquin R,San Joaquin River,37.494,-121.081,Patterson,DWR/South Central Region ,Satellite,Stanislaus,San Joaquin River Near Patterson,97
+SJS,San Joaquin R,San Joaquin River,37.295,-120.851,Stevenson,DWR/South Central Region ,,Merced,San Joaquin River Near Stevinson,82
+VNS,San Joaquin R,San Joaquin River,37.67604065,-121.2663269,Modesto,USGS & DWR,,San Joaquin,San Joaquin River Near Vernalis,35
+SGA,San Joaquin R,San Joaquin River,37.7928598,-121.4214954,Tracy,DWR/North Central Region ,Data Xchg-dwr Des,San Joaquin,Sugar Cut,8
+TRN,San Joaquin R,San Joaquin River,37.9928,-121.4542,Holt,USGS & DWR,,San Joaquin,Turner Cut Near Holt,0
+WCI,San Joaquin R,San Joaquin River,37.8316,-121.554,Byron,DWR/North Central Region ,,Contra Costa,West Canal At Clifton Court Intake,0
+DKS,Kings R,Tulare Lake,36.9081,-119.1242,Piedra,PG&E,Satellite,Fresno,Dinkey Ck Siphon,1320
+KRT,Kings R,San Joaquin River,36.8747,-119.1408,Sanger,USACE,,Fresno,Kings R Nr Trimmer,942
+MBK,Kings R,Tulare Lake,37.081,-118.862,Shaver Lake,"Pacific Gas & Electric Company, Auberry",,Fresno,Kings River At Meadowbrook,8150
+AMW,Kings R,Tulare Lake,36.386,-119.787,Lemoore,USACE,,Kings,Kings River Below Army Weir,230
+PDR,Kings R,San Joaquin River,36.819,-119.3409,Piedra,USACE,,Fresno,Mill Creek Near Piedra,550
+NKD,Kings R,Tulare Lake,36.88,-119.128,Sanger,PG&E,,Fresno,Nf Kings River Blw Dinkey Creek,1035
+KBC,Kings R,Tulare Lake,36.80889,-118.77806,Cedar Grove,Kings River Water Association,Satellite,Fresno,Sf Kings R Abv Boyden Cavern,3779
+KRR,Kings R,Tulare Lake,36.786958,-118.616571,Cedar Grove,Kings River Water Association,Satellite,Fresno,Sf Kings R Abv Roaring R,4851
+LCV,Kaweah R,Tulare Lake,36.4504,-119.0284,Woodlake,USACE,,Tulare,Dry Creek Near Lemoncove,589
+TRR,Kaweah R,Tulare Lake,36.4439,-118.9044,Three Rivers,USACE,,Tulare,Kaweah River At Three Rivers,833
+EBY,Tule R,Tulare Lake,36.124929,-119.356306,Tipton,Kaweah Delta Water Conservation District,Satellite,Tulare,Elk Bayou,248
+KKV,Kern R,Tulare Lake,35.7544,-118.4225,Kernville,USACE,,Kern,Kern R At Kernville,2635
+KRD,Kern R,Tulare Lake,35.4602,-118.7804,Bakersfield,"Pacific Gas & Electric Company, Auberry",,Kern,Kern R Bl Kern Cyn Ph Div Dam Ke-16,2100
+SKO,Kern R,Tulare Lake,35.73745346,-118.1736908,Onyx,USGS,,Kern,South Fork Kern River Near Onyx,2900
+LGC,Los Gatos Cr (near Coalinga),Tulare Lake,36.2146759,-120.4707108,Coalinga,USGS,,Fresno,Los Gatos Creek Near Coalinga,1080
+TOT,Susan R,North Lahontan,40.3814,-120.4342,Standish,DWR/Operations & Maintenance,,Lassen,Combined Ssd & Wcd Flows,4030
+SSD,Susan R,North Lahontan,40.38109207,-120.4350357,Standish,DWR/North Region ,,Lassen,Susan R Nr Standish,4030
+SSU,Susan R,North Lahontan,40.41371536,-120.6642227,Susanville,DWR/North Region ,,Lassen,Susan River At Susanville,4190
+WCD,Susan R,North Lahontan,40.38116837,-120.4349976,Standish,DWR/North Region ,,Lassen,Willow Creek Near Standish,4030
+DNC,Truckee R,North Lahontan,39.32351685,-120.2343674,Truckee,USGS,,Nevada,Donner Creek At Donner Lake,5924
+DCK,Truckee R,North Lahontan,39.32101822,-120.2079773,Truckee,USGS,,Nevada,Donner Creek At Hwy 89,5870
+INC,Truckee R,North Lahontan,39.4565717,-120.2871477,Truckee,USGS,,Sierra,Independence Creek Near Truckee,6920
+LAB,Truckee R,North Lahontan,39.43574142,-120.0843658,Truckee,USGS & DWR,,Nevada,Little Truckee R Abv Boca Reservoir,5619
+LTK,Truckee R,North Lahontan,39.38685226,-120.0954742,Truckee,USGS,,Nevada,Little Truckee R Bl Boca Res,5500
+MTK,Truckee R,North Lahontan,39.32879639,-120.1176987,Truckee,USACE,,Nevada,Martis Ck Nr Truckee,5730
+PTK,Truckee R,North Lahontan,39.37324142,-120.1315842,Truckee,USGS,,Nevada,Prosser Creek Near Truckee,5602
+STP,Truckee R,North Lahontan,39.471,-120.103,Truckee,USGS,,Sierra,Stampede,5956
+TBB,Truckee R,Sacramento River,39.38518524,-120.0876999,Truckee,USGS & DWR,,Nevada,Truckee R At Boca Bridge,5484
+FAR,Truckee R,North Lahontan,39.42796326,-120.0340881,Floriston,USGS,,Nevada,Truckee River At Farad,5153
+TTC,Truckee R,North Lahontan,39.1662941,-120.1443558,Tahoe City,USGS,,Placer,Truckee River At Tahoe City,5930
+TRK,Truckee R,North Lahontan,39.29629517,-120.2054749,Truckee,USGS,,Nevada,Truckee River Near Truckee,5858
+UPT,Truckee R,North Lahontan,38.92240906,-119.9915695,South Lake Tahoe,USGS,,El Dorado,Upper Truckee At South Lake Tahoe,6229
+WWR,Walker R,North Lahontan,38.378,-119.449,Coleville,USGS,,Mono,West Walker River Nr Coleville,6591

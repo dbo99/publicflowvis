@@ -1,0 +1,334 @@
+id_cdec,name_cdec,id_nws
+ALN,Alameda Ck Nr Niles,NILC1
+CBR,American River At Chili Bar,CBAC1
+AFO,American River At Fair Oaks,AFOC1
+AMK,American Sf Nr Kyburz,AKYC1
+ACK,Arcade Ck Nr Del Paso Hts,ACWC1
+ASS,Arroyo Seco Nr Soledad,SOLC1
+AVL,Arroyo Valle Nr Livermore,LVKC1
+BAT,Battle Creek,COTC1
+BRK,Bear Ck Ab Holsten Cyn Nr Rumsey,HCHC1
+BSD,Bear Ck Blw Eastside Canal,
+MCK,Bear Creek At Mc Kee Road,MEEC1
+BPG,Bear River At Pleasant Grove Rd,BPGC1
+BRW,Bear River Near Wheatland,BRWC1
+BIC,Big Chico Creek Near Chico,HKCC1
+BGF,Big Ck Diversion Nr Fish Camp,BCJC1
+BCC,Black Creek Nr Copperopolis,BCCC1
+BDV,Black Rascal Diversion,BLQC1
+BCK,Butte Creek Nr Chico,BKCC1
+BCD,Butte Creek Nr Durham,DRMC1
+BSL,Butte Slough Nr Meridian,BSLC1
+BBW,Bw-12 Import To Butte Creek,BBWC1
+RUM,Cache Creek At Rumsey Bridge,RMSC1
+CCY,Cache Creek At Yolo,YLOC1
+RYF,Cache Slough Above Ryer Island Ferry,CCSC1
+CSK,Castaic Canyon Ck Z3-2388,CYHC1
+CHC,Cherokee Canal Nr Richvale,RCVC1
+CBD,Cherry Ck Bl Dion R Ph Nr Mather,CKMC1
+CBV,Cherry Ck Bl Valley Dam Nr Hetch Hetchy,CVDC1
+CEI,Cherry Creek Near Early Intake,CEIC1
+CBP,Chowchilla Bypass,CHBC1
+IGO,Clear Creek Near Igo,RDGC1
+CDR,Colusa Drain Nr Hwy 20,CDNC1
+TOT,Combined Ssd & Wcd Flows,
+CMF,Cosumnes R Mid Fork Nr Somerset,SOSC1
+CNF,Cosumnes R N Fork Nr El Dorado,EDOC1
+MHB,Cosumnes River At Michigan Bar,MHBC1
+CWA,Cottonwood Creek Auxiliary Gage,CWAC1
+COW,Cow Creek Near Millville,CWCC1
+DVD,Deer Creek Below Stanford Vina Dam,
+DCS,Deer Creek Nr Smartville,DCSC1
+DCV,Deer Creek Nr Vina,DCVC1
+DLC,Delta Cross Channel Btw Sac R & Snodgras,
+DKS,Dinkey Ck Siphon,
+DNC,Donner Creek At Donner Lake,DCKC1
+DCK,Donner Creek At Hwy 89,DCHC1
+DAR,Drainage At Arbor Road,DARC1
+DGY,Dry Ck Nr Geyserville,DGYC1
+DCM,Dry Creek At Modesto At Claus Road,DCMC1
+DRY,Dry Creek Near Healdsburg,DRIC1
+LCV,Dry Creek Near Lemoncove,DLMC1
+DSN,Dry Creek Nr Snelling,DSNC1
+DSJ,Dutch Slough At Jersey Island,DUJC1
+EBM,Eastside Bypass Blw Mariposa Bypass,EBYC1
+ELN,Eastside Bypass Near El Nido,ELNC1
+FSW,Eel River At Fort Seward,FTSC1
+SCO,Eel River At Scotia,SCOC1
+EVA,Eel River Below Van Arsdale Dam 24hr Avg,VADC1
+MRD,Eel River Sf Nr Miranda (at Sylvandale),MRNC1
+CDM,Ef Russian R Blw Coyote Dam,LAMC1
+ECP,Elder Creek Near Paskenta,EDCC1
+ECK,Eleanor Ck Nr Hetch Hetchy,EHHC1
+ECC,Elizabeth Canyon Ck,ECCC1
+EBY,Elk Bayou,
+EST,Estrella River Near Estrella,ESRC1
+FHH,Falls Ck Nr Hetch Hetchy,FHHC1
+FAL,False River Near Oakley,FLQC1
+FSB,Feather R At Boyd's Lndng Abv Star Bend,FBLC1
+MER,Feather River At Merrimac,MRMC1
+GRL,Feather River Near Gridley,GRIC1
+FCK,Fish Canyon Ck,FICC1
+FCT,Fishermans Cut,FCTC1
+FHL,Fresno R Abv Henley Lake,HNRC1
+FRU,Fresno R Lewis Fork Nr Oakhurst,NEFC1
+GSS,Georgiana Slough At Sacramento River,GGSC1
+GLC,Grantline Canal (usgs),GCTC1
+GVC,Grass Valley Ck Nr Lewiston,GVCC1
+GRJ,Guadalupe R Abv Hwy 101 At San Jose,GSJC1
+GUD,Guadalupe R-san Jose At Almaden Expressw,GUDC1
+HCB,Hat Ck Blw Hat Ck,
+HCN,Hat Ck Nr Hat Ck,HCUC1
+HOL,Holland Cut Near Bethel Island,HDCC1
+INC,Independence Creek Near Truckee,ICPC1
+ICD,Indian Ck Nr Douglas City,ICDC1
+ICR,Indian Creek Below Indian Falls,IIFC1
+IHC,Indian Creek Near Happy Camp,HAPC1
+JBP,James Bypass,JAMC1
+JTR,Jones Tract,JTRC1
+TRR,Kaweah River At Three Rivers,KTRC1
+KCK,Kelsey Ck Blw Kelseyville,KCKC1
+KKV,Kern R At Kernville,KRVC1
+KRD,Kern R Bl Kern Cyn Ph Div Dam Ke-16,KBPC1
+KRT,Kings R Nr Trimmer,KREC1
+MBK,Kings River At Meadowbrook,MBSC1
+AMW,Kings River Below Army Weir,KRAC1
+OLS,Klamath River At Orleans,ONSC1
+KIG,Klamath River Below Iron Gate Dam,IRGC1
+KNK,Klamath River Near Klamath,KLMC1
+KSV,Klamath River Near Seiad Valley,SEIC1
+LWS,Lewiston (water Quality),
+LIB,Liberty Island @ Approx Cntr S End,LBIC1
+LCH,Lindo Channel Nr Chico,LIOC1
+LDC,Little Dry Creek (usbr),LTDC1
+LPS,Little Potato Slough At Terminous,LPGC1
+LRT,Little River Near Trinidad,TRDC1
+LSR,Little Shasta R Nr Montague,MGSC1
+LAB,Little Truckee R Abv Boca Reservoir,LITC1
+LTK,Little Truckee R Bl Boca Res,LTBC1
+LON,Loon Lake (smud),LNLC1
+LGC,Los Gatos Creek Near Coalinga,LGCC1
+MRF,Mad R Abv Ruth Reservoir Nr Forest Glen,MAUC1
+ARC,Mad River Near Arcata,ARCC1
+MTK,Martis Ck Nr Truckee,MCTC1
+MRE,Mattole River Near Ettersburg,ETTC1
+PTA,Mattole River Near Petrolia,MTOC1
+MCA,Mccloud R At Ah-di-na,MAHC1
+MSS,Mccloud River Above Shasta Lake,MSSC1
+MC7,Mccloud River Below Mccloud Dam,MBDC1
+MCD,Mccloud River Near Mccloud,MMCC1
+AMR,Merced R At Amsterdam Rd,MAJC1
+HIB,Merced R At Happy Isles Br Nr Yosemite,HPIC1
+H59,Merced R At Hwy 59 (mid),MPMC1
+POH,Merced R At Pohono Br Nr Yosemite,POHC1
+MBN,Merced R At Shaffer Bridge Nr Cressy,MIEC1
+MBH,Merced R Blw Crocker-huffman Dam,MIFC1
+CRS,Merced River At Cressy,CSYC1
+MMF,Merced River Below Merced Falls,EXQC1
+MBB,Merced River Near Briceburg,MBBC1
+MSN,Merced River Near Snelling,MPMC1
+MST,Merced River Near Stevinson,STVC1
+S52,Mf Stanislaus R At Kennedy Meadows,KNYC1
+S12,Mf Stanislaus R Bl Sandbar Div Dam,SVMC1
+MTO,Mf Tuolumne R Nr Oakland Rec Camp,THYC1
+MCU,Middle Ck Nr Upper Lake,MUPC1
+OXB,Middle Fk American R Nr Oxbow Ph,
+DOS,Middle Fork Eel River Near Dos Rios,DOSC1
+MFP,Middle Fork Feather River Near Portola,MFTC1
+MAB,Middle River Above Barrier,MLVC1
+MDM,Middle River At Middle River,
+MRU,Middle River At Undine Road,MVUC1
+HLT,Middle River Near Holt,MHTC1
+ORH,Middle Yuba River Below Our House Dam,OURC1
+MCH,Mill Creek Below Hwy 99,MKWC1
+PDR,Mill Creek Near Piedra,MLPC1
+MLM,Mill Creek Nr Los Molinos,MLMC1
+HWB,Miner Slough At Hwy 84 Bridge,
+MIR,Miner Slough Near Sacramento River,
+MOK,Mokelumne R At San Joaquin River,MKJC1
+MRS,Mormon Slough At Bellota (usace),MSBC1
+MFR,Morrison Creek At Florin Road,FLNC1
+MUC,Mud Creek Near Chico,MDMC1
+MSG,Mud Slough Nr Gustine,MUEC1
+NCL,N Fk Cache Ck Nr Clearlake Oaks 8ne,CKKC1
+NFW,N Fk Willow Ck Nr Sugar Pine,WLOC1
+NFC,N Fork Cache Creek At Hough Springs,HOUC1
+NHC,N Honcut Ck At Hwy 70,NHCC1
+GYB,N Yuba R Blw Goodyears Bar,GYRC1
+NYS,N Yuba R. Abv Slate Ck Nr Strawberry,NYSC1
+NAP,Napa River Near Napa,APCC1
+STH,Napa River Near St Helena,SHEC1
+NSL,National Steel,
+NRN,Navarro River Near Navarro,NVRC1
+NFD,Nf American R At North Fork Dam,NFDC1
+BTW,Nf Battle Ck Blw Div To Wildcat Canal,NBWC1
+F70,Nf Feather R Below Belden Dam,
+F56,Nf Feather R Bl Grizzly Creek,GZCC1
+F57,Nf Feather R Bl Rock Creek Div Dam,RCDC1
+NKD,Nf Kings River Blw Dinkey Creek,NKDC1
+M38,Nf Mokelumne R Ab Tiger Creek,TGRC1
+M46,Nf Mokelumne R Bl Electra Diversion,EDVC1
+M11,Nf Mokelumne R Bl Salt Springs Dam,MKSC1
+MBT,Nf Mokelumne R Bl Tiger Creek Afterbay,TIAC1
+NTR,Nf Trinity River At Helena,THAC1
+BNF,North Fork Battle Creek Near Manton,BNFC1
+NFP,North Fork Feather River At Pulga,PLGC1
+AVY,North Fork Stanislaus Near Avery,AVYC1
+NSD,North Fork Stanislaus R Blw Diversion,SNFC1
+OKN,O'kane (blue Lake),
+OMR,Old & Middle Rvrs Tidally Filtered Est,OMRC1
+ORX,Old River Above Doughty Cut,ORXC1
+OBI,Old River At Bacon Island (usgs),OBIC1
+ORI,Old River At Clifton Court Intake,CFNC1
+ODM,Old River At Delta Mendota Canal,OADC1
+OSJ,Old River At Franks Tract Near Terminous,OSJC1
+OH1,Old River At Head,ORHC1
+OH4,Old River At Highway 4,
+ORQ,Old River At Quimbly Is Near Bethel Is,ORQC1
+OLD,Old River Near Tracy,OLRC1
+ORM,Old River Upstream Of Mountain House Crk,OMCC1
+LCB,Oregon Creek Below Log Cabin,LOCC1
+ORE,Orestimba Creek Nr Newman,OREC1
+CHT,Pajaro River At Chittenden,AROC1
+PDC,Paradise Cut,PCUC1
+BPD,Parrot Div From Butte Creek,BPDC1
+PRB,Ph-27 Pit River At Big Bend,
+PR4,Ph-30 Pit River Blw Pit No 4 Dam,
+PIR,Piru Creek Blw Buck Cr Nr Pyramid Lake,PBCC1
+PP1,Pit R Below Pit #1 Ph Near Fall R Mills,PTRC1
+P35,Pit River Below Lake Britton,
+PCN,Pit River Near Canby,CNBC1
+PMN,Pit River Near Montgomery Creek,PITC1
+PTK,Prosser Creek Near Truckee,PSRC1
+PCG,Putah Creek Near Guenoc,PCGC1
+PUT,Putah Creek Near Winters,PUCC1
+ORK,Redwood Creek At Orick,ORIC1
+RCS,Ridge Cut Slough At Knights Landing,
+RCL,Rush Creek Near Lewiston,RCLC1
+RRU,Russian R Nr Ukiah,UKAC1
+CLV,Russian River At Cloverdale,CDLC1
+HAC,Russian River Near Hacienda Bridge,RIOC1
+HEA,Russian River Near Healdsburg,HEAC1
+HOP,Russian River Near Hopland,HOPC1
+DWS,Sacramento Deep Water Shipping Channel,
+FRE,Sacramento R @ Fremont Weir(crest 32.0'),FMWC1
+SDC,Sacramento R Above Delta Cross Channel,
+HMC,Sacramento R At Hamilton City-main Ch,HAMC1
+ORD,Sacramento R At Ord Ferry-main Channel,ORFC1
+SOI,Sacramento R Downstream Of Isleton,
+BND,Sacramento River At Bend Bridge,BDBC1
+BTC,Sacramento River At Butte City,BTCC1
+COL,Sacramento River At Colusa,CLUC1
+DLT,Sacramento River At Delta,
+FPT,Sacramento River At Freeport,FPOC1
+IST,Sacramento River At I Street Bridge,SACC1
+KWK,Sacramento River At Keswick,KESC1
+SRV,Sacramento River At Rio Vista (usgs),RVTC1
+VON,Sacramento River At Verona,VONC1
+VIN,Sacramento River At Vina Bridge-main Ch,VWBC1
+GES,Sacramento River Below Georgiana Slough,
+WLK,Sacramento River Below Wilkins Slough,WLKC1
+PAS,Salinas River At Paso Robles,PRBC1
+BRA,Salinas River Near Bradley,BRDC1
+SPR,Salinas River Near Spreckels,SPRC1
+SMS,Salmon River At Somes Bar,SBRC1
+SSH,Salt Slough At Hwy 165 Nr Stevinson,SSHC1
+SBH,San Benito R At Hwy 156 Near Hollister,HOSC1
+FSN,San Diego River At Fashion Valley,FSNC1
+SMN,San Joaquin R Abv Merced R Nr Newman,SJDC1
+BDT,San Joaquin R At Brandt Bridge,BBGC1
+FFB,San Joaquin R At Fremont Ford Bridge,FRFC1
+H41,San Joaquin R At Hwy 41,SJXC1
+MRB,San Joaquin R At Maze Rd Bridge,MZRC1
+PRI,San Joaquin R At Prisoners Pt Nr Termino,PRXC1
+SKB,San Joaquin R Blw Hwy 145 (skaggs Br),RSBC1
+SCL,San Joaquin R Nr Crows Landing,CRDC1
+SDP,San Joaquin R Nr Dos Palos,DOPC1
+SWA,San Joaquin R Nr Washington Rd,SJHC1
+SJG,San Joaquin River At Garwood Bridge,SQGC1
+GRF,San Joaquin River At Gravelly Ford,GVAC1
+SJJ,San Joaquin River At Jersey Point (usgs),JRSC1
+MSD,San Joaquin River At Mossdale Bridge,MOSC1
+SJB,San Joaquin River Below Bifurcation,BIFC1
+SJF,San Joaquin River Below Friant,SJFC1
+SJA,San Joaquin River Near Auberry,ARBC1
+SJC,San Joaquin River Near Buckley Cove,
+MEN,San Joaquin River Near Mendota,SJMC1
+NEW,San Joaquin River Near Newman,NWMC1
+SJP,San Joaquin River Near Patterson,PATC1
+SJS,San Joaquin River Near Stevinson,SSTC1
+VNS,San Joaquin River Near Vernalis,VNSC1
+SRN,San Ramon Ck At San Ramon,RACC1
+ELF,Santa Clara R At E La Falda Wy Nr Piru,SCPC1
+SFJ,Scott River Near Fort Jones,FTJC1
+SCS,Scotts Ck Nr Lakeport,SKPC1
+SSP,Sespe Creek Nr Fillmore,SESC1
+BTB,Sf Battle Ck Blw Div To Coleman Canal,BDCC1
+KBC,Sf Kings R Abv Boyden Cavern,KGPC1
+KRR,Sf Kings R Abv Roaring R,KRRC1
+PLK,Sf Pit River Near Likely,PLYC1
+RBG,Sf Rubicon River Below Gerle Ck,RRGC1
+S61,Sf Stanislaus R At Strawberry,SWQC1
+S83,Sf Stanislaus R Nr Strawberry Div Dam,SWZC1
+STO,Sf Tuolumne R Nr Oakland Rec Camp,TOLC1
+SGG,Shag Slough,
+SPU,Shasta R At Grenada Pump Plant,GNDC1
+SRM,Shasta River Near Montague,TAGC1
+SRY,Shasta River Near Yreka,YREC1
+SVC,Silver Cr Blw Camino Dam,SVCC1
+GRY,Sisquoc River At Garey,GARC1
+JED,Smith R Nr Crescent City (jed Smith Sp),CREC1
+BAS,South Fork Battle Creek Near Manton,SBNC1
+LEG,South Fork Eel River At Leggett,LEGC1
+SKO,South Fork Kern River Near Onyx,SKRC1
+SMW,South Fork Merced River At Wawona,MIIC1
+TBH,South Fork Trinity River Below Hyampom,HYMC1
+SFH,South Honcut Creek Near Bangor,HCTC1
+SPK,Spanish Ck Abv Blackhawk Ck At Keddie,SCBC1
+STP,Stampede,
+KOT,Stanislaus R At Koetitz Ranch,KOTC1
+OBB,Stanislaus R At Orange Blossom Bridge,OBBC1
+RIP,Stanislaus River At Ripon,RIPC1
+SSS,Steamboat Slough Btw Sac R And Sutter Sl,SSZC1
+SXS,Steamboat Slough Nr Sacramento R,SSKC1
+SCG,Stony Ck Nr Grizzly Flat (co Rd 200a),GZYC1
+SGA,Sugar Cut,DSUC1
+SSD,Susan R Nr Standish,SSJC1
+SSU,Susan River At Susanville,SUSC1
+SUT,Sutter Slough At Courtland,
+TSL,Threemile Slough At San Joaquin River,TSGC1
+TRC,Trinity R Abv Coffee Cr Nr Trinity Ctr,TCCC1
+NFH,Trinity R Abv Nf Trinity Nr Helena,
+TJC,Trinity R At Junction City,TRJC1
+DGC,Trinity River At Douglas City,DCYC1
+HPA,Trinity River At Hoopa,HOOC1
+TLK,Trinity River Below Limekiln Gulch,TLKC1
+TBR,Trinity River Near Burnt Ranch,BURC1
+TBB,Truckee R At Boca Bridge,TBBC1
+FAR,Truckee River At Farad,FARC1
+TTC,Truckee River At Tahoe City,TRTC1
+TRK,Truckee River Near Truckee,TRCC1
+TUM,Tuolumne Meadows,TUMC1
+TAI,Tuolumne R Abv Early Intake Near Mather,TEIC1
+TGC,Tuolumne R At The Grand Cyn Of Tuolumne,
+TRW,Tuolumne R At Waterford,TWFC1
+TBI,Tuolumne R Bl Early Intake Near Mather,EIMC1
+LGN,Tuolumne R Blw La Grange Dam Nr La Grang,NDPC1
+MOD,Tuolumne River At Modesto,MDSC1
+TRH,Tuolumne River Near Hetch Hetchy,HEHC1
+TRN,Turner Cut Near Holt,TUEC1
+UCC,Upper Cherry Ck,
+UPT,Upper Truckee At South Lake Tahoe,UTRC1
+BRI,Van Duzen R Nr Bridgeville At Grizzly Cr,BRGC1
+VCU,Victoria Canal Near Byron,VCUC1
+WFR,West Branch Feather River Near Magalia,WBGC1
+WCI,West Canal At Clifton Court Intake,WCIC1
+WWR,West Walker River Nr Coleville,CLEC1
+WCD,Willow Creek Near Standish,
+WSL,Willow Slough At Sb West Burrow Pit,WSWC1
+LIS,Yolo Bypass At Lisbon,LSBC1
+YBY,Yolo Bypass Near Woodland,YOLC1
+JBR,Yuba River At Jones Bar,JNSC1
+YPB,Yuba River At Parks Bar Bridge,
+MRY,Yuba River Near Marysville,MRYC1
+YRS,Yuba River Near Smartville,YRSC1
