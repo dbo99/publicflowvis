@@ -9,9 +9,9 @@ start <- "\r\n    1"
 end <- "\r\n  TOTALS"
 friant_fnf <- read.table(text=substring(rawtext, regexpr(start, rawtext), regexpr(end, rawtext)))
 as_tibble(friant_fnf)
-length_friant_fnf <- nrow(friant_fnf)
+nrow_friant_fnf <- nrow(friant_fnf)
 
-friant_fnf <- df[length_friant_fnf,]
+friant_fnf <- df[nrow_friant_fnf,]
 as_tibble(friant_fnf)
 friant_fnf  <- friant_fnf %>%         rename("monthday" = !!names(.[1]),
                                               "edison_lake_taf_usbr" = !!names(.[2]),
@@ -27,7 +27,7 @@ friant_fnf  <- friant_fnf %>%         rename("monthday" = !!names(.[1]),
                                              "friant_change_cfs_usbr" = !!names(.[12]),
                                              "friant_observedinflow_cfs_usbr" = !!names(.[13]),
                                              
-                                             "friant_natural_river_fnf" = !!names(.[14])) %>% select(-monthday)
+                                             "friant_natural_river_fnf" = !!names(.[14])) %>% select(-monthday, -V15)
 as_tibble(friant_fnf)
 
 }
