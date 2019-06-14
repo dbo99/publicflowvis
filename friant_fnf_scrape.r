@@ -100,7 +100,7 @@ as_tibble(friant_fnf_nextmostrecent)
 as_tibble(friant_fnf_mostrecent)
 as_tibble(friant_fnf_nextmostrecent)
 
-friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(prev_value = value) %>% 
+friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(prev_value = value)
                              transmute(res, prev_value)
 
 as_tibble(friant_fnf_nextmostrecent)
@@ -111,9 +111,12 @@ df_diff <- df_diff %>% mutate(diff = value - prev_value)
 as_tibble(df_diff)
 ## capacities (from various sources online, including wiki) ##
 
+
+
+
 res_id_nws <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
 res_cap <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252)
 res_cap <- data.frame(res_id_nws, res_cap)
 
-bhnc1 <- c(151716)  #area
+
 
