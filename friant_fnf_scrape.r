@@ -1,16 +1,22 @@
 rm(list = ls()) 
+setwd("~/R/proj/publicflowscrapeapp")
+source("libs.r")
 
 #{
 
 {
-library(pdftools)
+
 file <- "https://www.usbr.gov/mp/cvo/vungvari/milfln.pdf"
 rawtext  <- pdf_text(file)
-
+rawtext
+month_year <- res <- str_match(rawtext, "CALIFORNIA\r\n(.*?)FULL")  #https://stackoverflow.com/questions/39086400/extracting-a-string-between-other-two-strings-in-r
+month_year <- month_year[,2] %>% trimws() %>% as.yearmon() 
+month <- month(month_year)
+year <- year(month_year)
 start <- "\r\n    1"
 end <- "\r\n  TOTALS"
 friant_fnf <- read.table(text=substring(rawtext, regexpr(start, rawtext), regexpr(end, rawtext)))
-rm(start, end)
+rm(start, end, month_year, rawtext)
 as_tibble(friant_fnf)
 nrow_friant_fnf <- nrow(friant_fnf)
 
@@ -18,8 +24,11 @@ friant_fnf_mostrecent <- friant_fnf[nrow_friant_fnf,]  #most recent row from usb
 friant_fnf_nextmostrecent <- friant_fnf[nrow_friant_fnf - 1,]  #next most recent row from usbr
 as_tibble(friant_fnf_mostrecent)
 as_tibble(friant_fnf_nextmostrecent)
-rm(friant_fnf)
+rm(friant_fnf, nrow_friant_fnf )
 
+}
+
+{
 ## rename most recent ## 
 friant_fnf_mostrecent  <- friant_fnf_mostrecent %>% rename("monthday" = !!names(.[1]),
                                                            "Edison" = !!names(.[2]),
@@ -34,11 +43,18 @@ friant_fnf_mostrecent  <- friant_fnf_mostrecent %>% rename("monthday" = !!names(
                                                            "Millerton_dlystorchange" = !!names(.[11]),
                                                            "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
                                                            "Millerton_observedinflow_meandaily" = !!names(.[13]),
-                                                           "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-monthday, -V15)
+                                                           "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15) 
+}
 as_tibble(friant_fnf_mostrecent)
-
+mostrecent_date <- friant_fnf_mostrecent$monthday
+nextmostrecent_date <- friant_fnf_mostrecent$date - 1
+{
+  friant_fnf_mostrecent <- friant_fnf_mostrecent %>% mutate(date = paste0(month,"/",monthday, "/", year)) %>%
+    mutate(date = mdy(date)) %>% select(-date)
+as_tibble(friant_fnf_mostrecent)
+}
 ## rename next most recent ## 
-
+{
 friant_fnf_nextmostrecent  <- friant_fnf_nextmostrecent %>% rename("monthday" = !!names(.[1]),
                                                                    "Edison" = !!names(.[2]),
                                                                    "Florence" = !!names(.[3]),
@@ -52,9 +68,17 @@ friant_fnf_nextmostrecent  <- friant_fnf_nextmostrecent %>% rename("monthday" = 
                                                                    "Millerton_dlystorchange" = !!names(.[11]),
                                                                    "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
                                                                    "Millerton_observedinflow_meandaily" = !!names(.[13]),
-                                                                   "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-monthday, -V15)
-as_tibble(friant_fnf_mostrecent)
+                                                                   "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15)
 }
+
+{
+friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(date = paste0(month,"/",monthday, "/", year)) %>%
+                                                           mutate(date = mdy(date)) %>% select(-date)
+as_tibble(friant_fnf_nextmostrecent)
+}
+
+as_tibble(friant_fnf_nextmostrecent)
+as_tibble(friant_fnf_mostrecent)
 ###### convert mostrecent's to long format, add attributes######
 {
 friant_fnf_mostrecent_t <- friant_fnf_mostrecent %>% gather(key = "res", value = "value")
