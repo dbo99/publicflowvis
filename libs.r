@@ -16,4 +16,5 @@
   library(XML)
   library(htmlwidgets)
   library(pdftools)
+  library(zoo)
 }
