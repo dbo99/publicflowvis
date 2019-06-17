@@ -22,19 +22,19 @@ rm(friant_fnf)
 
 ## rename most recent ## 
 friant_fnf_mostrecent  <- friant_fnf_mostrecent %>% rename("monthday" = !!names(.[1]),
-                                             "Edison" = !!names(.[2]),
-                                             "Florence" = !!names(.[3]),
-                                             "Huntington" = !!names(.[4]),
-                                             "Shaver" = !!names(.[5]),
-                                             "MammothPool" = !!names(.[6]) ,
-                                             "Redinger" = !!names(.[7]),
-                                             "CraneValley" = !!names(.[8]),
-                                             "Kerckhoff" = !!names(.[9]),
-                                             "Millerton_stor_usbr" = !!names(.[10])  ,                                          
-                                             "Millerton_dlystorchange_usbr" = !!names(.[11]),
-                                             "Millerton_dlyinflowchange_usbr" = !!names(.[12]),
-                                             "Millerton_observedinflow_cfs" = !!names(.[13]),
-                                             "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-monthday, -V15)
+                                                           "Edison" = !!names(.[2]),
+                                                           "Florence" = !!names(.[3]),
+                                                           "Huntington" = !!names(.[4]),
+                                                           "Shaver" = !!names(.[5]),
+                                                           "MammothPool" = !!names(.[6]) ,
+                                                           "Redinger" = !!names(.[7]),
+                                                           "CraneValley" = !!names(.[8]),
+                                                           "Kerckhoff" = !!names(.[9]),
+                                                           "Millerton_stor" = !!names(.[10])  ,                                          
+                                                           "Millerton_dlystorchange" = !!names(.[11]),
+                                                           "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
+                                                           "Millerton_observedinflow_meandaily" = !!names(.[13]),
+                                                           "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-monthday, -V15)
 as_tibble(friant_fnf_mostrecent)
 
 ## rename next most recent ## 
@@ -48,10 +48,10 @@ friant_fnf_nextmostrecent  <- friant_fnf_nextmostrecent %>% rename("monthday" = 
                                                                    "Redinger" = !!names(.[7]),
                                                                    "CraneValley" = !!names(.[8]),
                                                                    "Kerckhoff" = !!names(.[9]),
-                                                                   "Millerton_stor_usbr" = !!names(.[10])  ,                                          
-                                                                   "Millerton_dlystorchange_usbr" = !!names(.[11]),
-                                                                   "Millerton_dlyinflowchange_usbr" = !!names(.[12]),
-                                                                   "Millerton_observedinflow_cfs" = !!names(.[13]),
+                                                                   "Millerton_stor" = !!names(.[10])  ,                                          
+                                                                   "Millerton_dlystorchange" = !!names(.[11]),
+                                                                   "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
+                                                                   "Millerton_observedinflow_meandaily" = !!names(.[13]),
                                                                    "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-monthday, -V15)
 as_tibble(friant_fnf_mostrecent)
 }
@@ -126,8 +126,7 @@ as_tibble(friant_fnf_dlychnge)
 
 
 friant_fnf  <- rbind(friant_fnf_mostrecent, friant_fnf_nextmostrecent, friant_fnf_dlychnge)
-friant_fnf_dlychnge$res <- gsub("Millerton_stor_usbr", "Millerton_stor", friant_fnf_dlychnge$res )
-friant_fnf_dlychnge$res <- gsub("Millerton_observedinflow_cfs", "Millerton_inflow", friant_fnf_dlychnge$res )
+friant_fnf_dlychnge$res <- gsub("Millerton_stor", "Millerton_stor", friant_fnf_dlychnge$res )
 rm(friant_fnf_mostrecent, friant_fnf_nextmostrecent, friant_fnf_dlychnge)
 as_tibble(friant_fnf)
 
@@ -138,9 +137,11 @@ as_tibble(friant_fnf)
 
 }
 
+{
 res_id_nws <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
 res_cap <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252)
 res_cap <- data.frame(res_id_nws, res_cap)
 rm(res_id_nws)
 as_tibble(res_cap)
+}
 #}
