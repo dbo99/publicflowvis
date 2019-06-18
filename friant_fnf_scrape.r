@@ -121,7 +121,7 @@ rm(friant_fnf_nextmostrecent_t, unit, usbr_web_param, nws_id)
 as_tibble(friant_fnf_nextmostrecent)
 
 friant_fnf_nextmostrecent$value <- gsub(",", "", friant_fnf_nextmostrecent$value )
-friant_fnf_nextmostrecent$value <- gsub("+", "", friant_fnf_nextmostrecent$value ) #doesn't work, but below's as.numeric() seems to
+#friant_fnf_nextmostrecent$value <- gsub("+", "", friant_fnf_nextmostrecent$value ) #doesn't work, but below's as.numeric() seems to
 as_tibble(friant_fnf_nextmostrecent)
 friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(value = as.numeric(value)) 
 as_tibble(friant_fnf_nextmostrecent)

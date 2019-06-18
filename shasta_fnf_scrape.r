@@ -88,7 +88,7 @@ as_tibble(shasta_fnf_mostrecent)
   as_tibble(shasta_fnf_mostrecent)
   
   shasta_fnf_mostrecent$value <- gsub(",", "", shasta_fnf_mostrecent$value )
-  shasta_fnf_mostrecent$value <- gsub("+", "", shasta_fnf_mostrecent$value ) #doesn't work, but below's as.numeric() seems to
+ # shasta_fnf_mostrecent$value <- gsub("+", "", shasta_fnf_mostrecent$value ) #doesn't work, but below's as.numeric() seems to
   as_tibble(shasta_fnf_mostrecent)
   shasta_fnf_mostrecent <- shasta_fnf_mostrecent %>% mutate(value = as.numeric(value)) 
   as_tibble(shasta_fnf_mostrecent)
@@ -160,8 +160,8 @@ as_tibble(shasta_fnf_nextmostrecent)
 }
 
 {
-  res_id_nws <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
-  res_cap <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252)
+  res_id_nws <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1")
+  res_cap <- c(34.6, 35.2, 24.3, 15.7, 34.1, 4552)  #taf
   res_cap <- data.frame(res_id_nws, res_cap)
   rm(res_id_nws)
   as_tibble(res_cap)
