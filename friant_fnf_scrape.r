@@ -2,19 +2,19 @@ rm(list = ls())
 setwd("~/R/proj/publicflowscrapeapp")
 source("libs.r")
 
-#{
+{
 
 {
 
 file <- "https://www.usbr.gov/mp/cvo/vungvari/milfln.pdf"
 rawtext  <- pdf_text(file)
 rawtext
-month_year <- res <- str_match(rawtext, "CALIFORNIA\r\n(.*?)FULL")  #https://stackoverflow.com/questions/39086400/extracting-a-string-between-other-two-strings-in-r
+month_year  <- str_match(rawtext, "CALIFORNIA\r\n(.*?)FULL")  #https://stackoverflow.com/questions/39086400/extracting-a-string-between-other-two-strings-in-r
 month_year <- month_year[,2] %>% trimws() %>% as.yearmon() 
 month <- month(month_year)
 year <- year(month_year)
-start <- "\r\n    1"
-end <- "\r\n  TOTALS"
+start <- "\n    1"
+end <- "\n  TOTALS"
 friant_fnf <- read.table(text=substring(rawtext, regexpr(start, rawtext), regexpr(end, rawtext)))
 rm(start, end, month_year, rawtext)
 as_tibble(friant_fnf)
@@ -39,20 +39,20 @@ friant_fnf_mostrecent  <- friant_fnf_mostrecent %>% rename("monthday" = !!names(
                                                            "Redinger" = !!names(.[7]),
                                                            "CraneValley" = !!names(.[8]),
                                                            "Kerckhoff" = !!names(.[9]),
-                                                           "Millerton_stor" = !!names(.[10])  ,                                          
-                                                           "Millerton_dlystorchange" = !!names(.[11]),
+                                                           "stor_upstream" = !!names(.[10])  ,                                          
+                                                           "upstream_dlystorchange" = !!names(.[11]),
                                                            "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
                                                            "Millerton_observedinflow_meandaily" = !!names(.[13]),
                                                            "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15) 
 }
 as_tibble(friant_fnf_mostrecent)
-mostrecent_date <- friant_fnf_mostrecent$monthday
-nextmostrecent_date <- friant_fnf_mostrecent$date - 1
-{
-  friant_fnf_mostrecent <- friant_fnf_mostrecent %>% mutate(date = paste0(month,"/",monthday, "/", year)) %>%
-    mutate(date = mdy(date)) %>% select(-date)
-as_tibble(friant_fnf_mostrecent)
-}
+date_mostrecent<- as.integer(friant_fnf_mostrecent$monthday)
+date_nextmostrecent <- as.integer(date_mostrecent - 1)
+date_mostrecent <- paste0(month,"/", date_mostrecent, "/", year) %>% mdy()
+date_nextmostrecent <- paste0(month,"/", date_nextmostrecent, "/", year) %>% mdy()
+
+friant_fnf_mostrecent <- friant_fnf_mostrecent %>% select(-monthday) 
+
 ## rename next most recent ## 
 {
 friant_fnf_nextmostrecent  <- friant_fnf_nextmostrecent %>% rename("monthday" = !!names(.[1]),
@@ -64,18 +64,13 @@ friant_fnf_nextmostrecent  <- friant_fnf_nextmostrecent %>% rename("monthday" = 
                                                                    "Redinger" = !!names(.[7]),
                                                                    "CraneValley" = !!names(.[8]),
                                                                    "Kerckhoff" = !!names(.[9]),
-                                                                   "Millerton_stor" = !!names(.[10])  ,                                          
-                                                                   "Millerton_dlystorchange" = !!names(.[11]),
+                                                                   "stor_upstream" = !!names(.[10])  ,                                          
+                                                                   "upstream_dlystorchange" = !!names(.[11]),
                                                                    "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
                                                                    "Millerton_observedinflow_meandaily" = !!names(.[13]),
-                                                                   "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15)
+                                                                   "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15, -monthday) 
 }
 
-{
-friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(date = paste0(month,"/",monthday, "/", year)) %>%
-                                                           mutate(date = mdy(date)) %>% select(-date)
-as_tibble(friant_fnf_nextmostrecent)
-}
 
 as_tibble(friant_fnf_nextmostrecent)
 as_tibble(friant_fnf_mostrecent)
@@ -144,13 +139,20 @@ as_tibble(friant_fnf_dlychnge)
 friant_fnf_dlychnge <- friant_fnf_dlychnge %>% mutate(value = value.x - value.y)
 as_tibble(friant_fnf_dlychnge)
 friant_fnf_dlychnge <- friant_fnf_dlychnge %>% transmute(res, value, nws_id = nws_id.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
-friant_fnf_dlychnge$usbr_web_param <- gsub("nextlatest", "dailychange", friant_fnf_dlychnge$usbr_web_param )
+friant_fnf_dlychnge <- friant_fnf_dlychnge %>% mutate(date = date_mostrecent)
+friant_fnf_dlychnge$usbr_web_param <- gsub("nextlatest", "dailychange", friant_fnf_dlychnge$usbr_web_param ) 
+                                  
 
 as_tibble(friant_fnf_dlychnge)
 
+## add date column
+
+friant_fnf_mostrecent <- friant_fnf_mostrecent %>% mutate(date = date_mostrecent)
+friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(date = date_nextmostrecent)
+friant_fnf_dlychnge <- friant_fnf_dlychnge %>% mutate(date = date_mostrecent)
 
 friant_fnf  <- rbind(friant_fnf_mostrecent, friant_fnf_nextmostrecent, friant_fnf_dlychnge)
-friant_fnf_dlychnge$res <- gsub("Millerton_stor", "Millerton_stor", friant_fnf_dlychnge$res )
+friant_fnf_dlychnge$res <- gsub("stor_upstream", "stor_upstream", friant_fnf_dlychnge$res )
 rm(friant_fnf_mostrecent, friant_fnf_nextmostrecent, friant_fnf_dlychnge)
 as_tibble(friant_fnf)
 
@@ -168,4 +170,6 @@ res_cap <- data.frame(res_id_nws, res_cap)
 rm(res_id_nws)
 as_tibble(res_cap)
 }
-#}
+
+
+}
