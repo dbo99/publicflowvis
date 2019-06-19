@@ -1,6 +1,6 @@
 
 
-
+{
 {
 rm(list = ls()) 
 setwd("~/R/proj/publicflowscrapeapp")
@@ -37,11 +37,12 @@ rm(shasta_fnf, nrow_shasta_fnf )
                                                              "IronCanyon" = !!names(.[4]),
                                                              "Pit6" = !!names(.[5]),
                                                              "Pit7" = !!names(.[6]) ,
-                                                             "upstream_stor" = !!names(.[7]),
-                                                             "upstream_dlystorchange" = !!names(.[8]),
+                                                             "Shasta_upstream_stor" = !!names(.[7]),
+                                                             "Shasta_upstream_dlystorchange" = !!names(.[8]),
                                                              "Shasta_observedinflowchange_meandaily" = !!names(.[9]),
                                                              "Shasta_observedinflow_meandaily" = !!names(.[10]),
-                                                             "Shasta_natriver_fnf" = !!names(.[11])) %>% select(-V12) 
+                                                             "Shasta_natriver_fnf" = !!names(.[11]),
+                                                             "Shasta_natriver_WYaccum" = !!names(.[12]))
 
 as_tibble(shasta_fnf_mostrecent)
 }
@@ -60,11 +61,12 @@ shasta_fnf_mostrecent <- shasta_fnf_mostrecent %>% select(-monthday)
                                                                      "IronCanyon" = !!names(.[4]),
                                                                      "Pit6" = !!names(.[5]),
                                                                      "Pit7" = !!names(.[6]) ,
-                                                                     "upstream_stor" = !!names(.[7]),
-                                                                     "upstream_dlystorchange" = !!names(.[8]),
+                                                                     "Shasta_upstream_stor" = !!names(.[7]),
+                                                                     "Shasta_upstream_dlystorchange" = !!names(.[8]),
                                                                      "Shasta_observedinflowchange_meandaily" = !!names(.[9]),
                                                                      "Shasta_observedinflow_meandaily" = !!names(.[10]),
-                                                                     "Shasta_natriver_fnf" = !!names(.[11])) %>% select(-V12, -monthday) 
+                                                                     "Shasta_natriver_fnf" = !!names(.[11]),
+                                                                     "Shasta_natriver_WYaccum" = !!names(.[12])) %>% select(-monthday) 
 }
 
 
@@ -74,14 +76,15 @@ as_tibble(shasta_fnf_mostrecent)
 #{
   shasta_fnf_mostrecent_t <- shasta_fnf_mostrecent %>% gather(key = "res", value = "value")
   nws_id <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1", "SHDC1", "SHDC1", "SHDC1", 
-              "SHDC1")
-  usbr_web_param <- c("stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished", 
-                      "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished",
-                      "stor_dlychnge", "meancfs_dlychnge", 
-                      "meancfs_dlyinflowobs_latest_cvopublished",
-                      "meancfs_fnf_latest_cvopublished")
+              "SHDC1", "SHDC1")
+
+  usbr_web_param <- c("stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", 
+                      "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest",
+                      "stor_cvopublished_dlychnge_todelete", "meancfs_cvopublished_dlychnge_todelete", 
+                      "meandlyinflowobs_cvopublished_latest",
+                      "meanfnf_cvopublished_latest", "wyaccum_cvopublished_latest")
   
-  unit <-  c("taf", "taf", "taf", "taf", "taf", "taf", "taf", "taf","cfs", "cfs")
+  unit <-  c("af", "af", "af", "af", "af", "af", "af", "af","cfs", "cfs", "taf")
   as_tibble(shasta_fnf_mostrecent_t)
   shasta_fnf_mostrecent <- cbind(shasta_fnf_mostrecent_t, nws_id, usbr_web_param, unit)
   rm(shasta_fnf_mostrecent_t, unit, usbr_web_param, nws_id)
@@ -96,7 +99,7 @@ as_tibble(shasta_fnf_mostrecent)
 
 {
   shasta_fnf_mostrecent <- shasta_fnf_mostrecent %>% 
-    filter(usbr_web_param != "stor_dlychnge") %>% filter(usbr_web_param != "meancfs_dlychnge")
+    filter(usbr_web_param != "stor_cvopublished_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_cvopublished_dlychnge_todelete")
   as_tibble(shasta_fnf_mostrecent)
 }
 ###### convert mostrecent's to long format, add attributes######
@@ -104,14 +107,14 @@ as_tibble(shasta_fnf_mostrecent)
 {
   shasta_fnf_nextmostrecent_t <- shasta_fnf_nextmostrecent %>% gather(key = "res", value = "value")
   nws_id <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1", "SHDC1", "SHDC1", "SHDC1", 
-              "SHDC1")
-  usbr_web_param <- c("stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished", 
-                      "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished",
-                      "stor_dlychnge", "meancfs_dlychnge", 
-                      "meancfs_dlyinflowobs_latest_cvopublished",
-                      "meancfs_fnf_latest_cvopublished")
+              "SHDC1", "SHDC1")
+  usbr_web_param <- c("stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", 
+                      "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest",
+                      "stor_cvopublished_dlychnge_todelete", "meancfs_cvopublished_dlychnge_todelete", 
+                      "meandlyinflowobs_cvopublished_nextlatest",
+                      "meanfnf_cvopublished_nextlatest", "wyaccum_cvopublished_nextlatest")
   
-  unit <-  c("taf", "taf", "taf", "taf", "taf", "taf", "taf", "taf","cfs", "cfs")
+  unit <-  c("af", "af", "af", "af", "af", "af", "af", "af","cfs", "cfs", "taf")
   shasta_fnf_nextmostrecent <- cbind(shasta_fnf_nextmostrecent_t, nws_id, usbr_web_param, unit)
   rm(shasta_fnf_nextmostrecent_t, unit, usbr_web_param, nws_id)
   as_tibble(shasta_fnf_nextmostrecent)
@@ -122,7 +125,7 @@ as_tibble(shasta_fnf_mostrecent)
   shasta_fnf_nextmostrecent <- shasta_fnf_nextmostrecent %>% mutate(value = as.numeric(value)) 
   as_tibble(shasta_fnf_nextmostrecent)
   shasta_fnf_nextmostrecent <- shasta_fnf_nextmostrecent %>%
-    filter(usbr_web_param != "stor_dlychnge") %>% filter(usbr_web_param != "meancfs_dlychnge")
+    filter(usbr_web_param != "stor_cvopublished_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_cvopublished_dlychnge_todelete")
   as_tibble(shasta_fnf_nextmostrecent)
 }
 as_tibble(shasta_fnf_mostrecent)
@@ -148,11 +151,11 @@ as_tibble(shasta_fnf_nextmostrecent)
   shasta_fnf_dlychnge <- shasta_fnf_dlychnge %>% mutate(date = date_mostrecent)
   
   shasta_fnf  <- rbind(shasta_fnf_mostrecent, shasta_fnf_nextmostrecent, shasta_fnf_dlychnge)
-  shasta_fnf_dlychnge$res <- gsub("Shasta_stor", "Shasta_stor", shasta_fnf_dlychnge$res )
+  #shasta_fnf_dlychnge$res <- gsub("Shasta_stor", "Shasta_stor", shasta_fnf_dlychnge$res )
   rm(shasta_fnf_mostrecent, shasta_fnf_nextmostrecent, shasta_fnf_dlychnge)
   as_tibble(shasta_fnf)
   
-  
+  shasta_fnf <- shasta_fnf %>% mutate(value = round(value, 0))
   
   ## capacities (from various sources online, including wiki) ##
   
@@ -167,5 +170,5 @@ as_tibble(shasta_fnf_nextmostrecent)
   as_tibble(res_cap)
 }
 
-
+}
 

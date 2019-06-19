@@ -1,8 +1,12 @@
+
+
+
+{
 rm(list = ls()) 
 setwd("~/R/proj/publicflowscrapeapp")
 source("libs.r")
 
-{
+
 
 {
 
@@ -39,11 +43,12 @@ friant_fnf_mostrecent  <- friant_fnf_mostrecent %>% rename("monthday" = !!names(
                                                            "Redinger" = !!names(.[7]),
                                                            "CraneValley" = !!names(.[8]),
                                                            "Kerckhoff" = !!names(.[9]),
-                                                           "stor_upstream" = !!names(.[10])  ,                                          
-                                                           "upstream_dlystorchange" = !!names(.[11]),
+                                                           "Millerton_upstream_stor" = !!names(.[10])  ,                                          
+                                                           "Millerton_upstream_dlystorchange" = !!names(.[11]),
                                                            "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
                                                            "Millerton_observedinflow_meandaily" = !!names(.[13]),
-                                                           "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15) 
+                                                           "Millerton_natriver_fnf" = !!names(.[14]),
+                                                           "Millerton_natriver_wyaccum" = !!names(.[15])) 
 }
 as_tibble(friant_fnf_mostrecent)
 date_mostrecent<- as.integer(friant_fnf_mostrecent$monthday)
@@ -64,11 +69,12 @@ friant_fnf_nextmostrecent  <- friant_fnf_nextmostrecent %>% rename("monthday" = 
                                                                    "Redinger" = !!names(.[7]),
                                                                    "CraneValley" = !!names(.[8]),
                                                                    "Kerckhoff" = !!names(.[9]),
-                                                                   "stor_upstream" = !!names(.[10])  ,                                          
-                                                                   "upstream_dlystorchange" = !!names(.[11]),
+                                                                   "Millerton_upstream_stor" = !!names(.[10])  ,                                          
+                                                                   "Millerton_upstream_dlystorchange" = !!names(.[11]),
                                                                    "Millerton_observedinflowchange_meandaily" = !!names(.[12]),
                                                                    "Millerton_observedinflow_meandaily" = !!names(.[13]),
-                                                                   "Millerton_natriver_fnf" = !!names(.[14])) %>% select(-V15, -monthday) 
+                                                                   "Millerton_natriver_fnf" = !!names(.[14]),
+                                                                   "Millerton_natriver_wyaccum" = !!names(.[15])) %>% select(-monthday)
 }
 
 
@@ -78,14 +84,12 @@ as_tibble(friant_fnf_mostrecent)
 {
 friant_fnf_mostrecent_t <- friant_fnf_mostrecent %>% gather(key = "res", value = "value")
 nws_id <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
-                    "FRAC1", "FRAC1", "FRAC1", "FRAC1")
-usbr_web_param <- c("stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished",
-           "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_latest_cvopublished", "stor_dlychnge", "meancfs_dlychnge", "meancfs_dlyinflowobs_latest_cvopublished",
-           "meancfs_fnf_latest_cvopublished")
+                    "FRAC1", "FRAC1", "FRAC1", "FRAC1", "FRAC1")
+usbr_web_param <- c("stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest",
+                    "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_dlychnge_todelete", "meancfs_cvopublished_dlychnge_todelete", "meandlyinflowobs_cvopublished_latest",
+                    "meanfnf_cvopublished_latest", "wyaccum_cvopublished_latest")
 
-unit <- c("taf", "taf", "taf", "taf", "taf", "taf",
-          "taf", "taf", "taf", "taf", "cfs", "cfs",
-          "cfs")
+unit <- c("af", "af", "af", "af", "af", "af", "af", "af", "af", "af", "cfs", "cfs", "cfs", "taf")
 
 friant_fnf_mostrecent <- cbind(friant_fnf_mostrecent_t, nws_id, usbr_web_param, unit)
 rm(friant_fnf_mostrecent_t, unit, usbr_web_param, nws_id)
@@ -100,7 +104,7 @@ as_tibble(friant_fnf_mostrecent)
 
 {
 friant_fnf_mostrecent <- friant_fnf_mostrecent %>% 
-                        filter(usbr_web_param != "stor_dlychnge") %>% filter(usbr_web_param != "meancfs_dlychnge")
+                        filter(usbr_web_param != "stor_cvopublished_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_cvopublished_dlychnge_todelete")
 as_tibble(friant_fnf_mostrecent)
 }
 ###### convert mostrecent's to long format, add attributes######
@@ -108,14 +112,13 @@ as_tibble(friant_fnf_mostrecent)
 {
 friant_fnf_nextmostrecent_t <- friant_fnf_nextmostrecent %>% gather(key = "res", value = "value")
 nws_id <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
-            "FRAC1", "FRAC1", "FRAC1", "FRAC1")
-usbr_web_param <- c("stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished",
-           "stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished", "stor_nextlatest_cvopublished", "stor_dlychnge", "meancfs_dlychnge", "meancfs_dlyinflowobs_nextlatest_cvopublished",
-           "meancfs_fnf_nextlatest_cvopublished")
+            "FRAC1", "FRAC1", "FRAC1", "FRAC1", "FRAC1")
+usbr_web_param <- c("stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest",
+                    "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_dlychnge_todelete", "meancfs_cvopublished_dlychnge_todelete", "meandlyinflowobs_cvopublished_nextlatest",
+                    "meanfnf_cvopublished_nextlatest", "wyaccum_cvopublished_nextlatest")
 
-unit <- c("taf", "taf", "taf", "taf", "taf", "taf",
-          "taf", "taf", "taf", "taf", "cfs", "cfs",
-          "cfs")
+unit <- c("af", "af", "af", "af", "af", "af", "af", "af", "af", "af", "cfs", "cfs", "cfs", "taf")
+
 friant_fnf_nextmostrecent <- cbind(friant_fnf_nextmostrecent_t, nws_id, usbr_web_param, unit)
 rm(friant_fnf_nextmostrecent_t, unit, usbr_web_param, nws_id)
 as_tibble(friant_fnf_nextmostrecent)
@@ -126,7 +129,7 @@ as_tibble(friant_fnf_nextmostrecent)
 friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(value = as.numeric(value)) 
 as_tibble(friant_fnf_nextmostrecent)
 friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>%
-                             filter(usbr_web_param != "stor_dlychnge") %>% filter(usbr_web_param != "meancfs_dlychnge")
+                             filter(usbr_web_param != "stor_cvopublished_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_cvopublished_dlychnge_todelete")
 as_tibble(friant_fnf_nextmostrecent)
 }
 as_tibble(friant_fnf_mostrecent)
@@ -152,11 +155,11 @@ friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(date = date_ne
 friant_fnf_dlychnge <- friant_fnf_dlychnge %>% mutate(date = date_mostrecent)
 
 friant_fnf  <- rbind(friant_fnf_mostrecent, friant_fnf_nextmostrecent, friant_fnf_dlychnge)
-friant_fnf_dlychnge$res <- gsub("stor_upstream", "stor_upstream", friant_fnf_dlychnge$res )
+#friant_fnf_dlychnge$res <- gsub("Millerton_upstream_stor", "Millerton_upstream_stor", friant_fnf_dlychnge$res )
 rm(friant_fnf_mostrecent, friant_fnf_nextmostrecent, friant_fnf_dlychnge)
 as_tibble(friant_fnf)
 
-
+friant_fnf <- friant_fnf %>% mutate(value = round(value, 0))
 
 ## capacities (from various sources online, including wiki) ##
 
