@@ -2,19 +2,25 @@
 
 
 {
-rm(list = ls()) 
-setwd("~/R/proj/publicflowscrapeapp")
+#rm(list = ls()) 
+  rm(list=setdiff(ls(),  "shasta_fnf"))
+#setwd("~/R/proj/publicflowscrapeapp")
+setwd("~/Documents/publicflowvis")
 source("libs.r")
 
 
 
-{
+
 
 file <- "https://www.usbr.gov/mp/cvo/vungvari/milfln.pdf"
 rawtext  <- pdf_text(file)
-rawtext
+#rawtext
 month_year  <- str_match(rawtext, "CALIFORNIA\r\n(.*?)FULL")  #https://stackoverflow.com/questions/39086400/extracting-a-string-between-other-two-strings-in-r
+if (anyNA(month_year)) {month_year  <- str_match(rawtext, "CALIFORNIA\n(.*?)FULL") }
+
+
 month_year <- month_year[,2] %>% trimws() %>% as.yearmon() 
+
 month <- month(month_year)
 year <- year(month_year)
 start <- "\n    1"
@@ -30,7 +36,7 @@ as_tibble(friant_fnf_mostrecent)
 as_tibble(friant_fnf_nextmostrecent)
 rm(friant_fnf, nrow_friant_fnf )
 
-}
+#}
 
 {
 ## rename most recent ## 
@@ -85,9 +91,12 @@ as_tibble(friant_fnf_mostrecent)
 friant_fnf_mostrecent_t <- friant_fnf_mostrecent %>% gather(key = "res", value = "value")
 nws_id <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
                     "FRAC1", "FRAC1", "FRAC1", "FRAC1", "FRAC1")
-usbr_web_param <- c("stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest",
-                    "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_latest", "stor_cvopublished_dlychnge_todelete", "meancfs_cvopublished_dlychnge_todelete", "meandlyinflowobs_cvopublished_latest",
-                    "meanfnf_cvopublished_latest", "wyaccum_cvopublished_latest")
+usbr_web_param <- c("storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", 
+                    "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant",
+                    "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "upstrstorage_usbrcvo_latest_instant", 
+                    "stor_usbrcvo_dlychnge_todelete", "meancfs_usbrcvo_dlychnge_todelete", 
+                    "inflow_usbrcvo_latest_meandly", "fullnaturalflow_usbrcvo_latest_meandly", 
+                    "fullnaturalflow_usbrcvo_latest_wyaccum")
 
 unit <- c("af", "af", "af", "af", "af", "af", "af", "af", "af", "af", "cfs", "cfs", "cfs", "taf")
 
@@ -104,7 +113,7 @@ as_tibble(friant_fnf_mostrecent)
 
 {
 friant_fnf_mostrecent <- friant_fnf_mostrecent %>% 
-                        filter(usbr_web_param != "stor_cvopublished_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_cvopublished_dlychnge_todelete")
+                        filter(usbr_web_param != "stor_usbrcvo_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_usbrcvo_dlychnge_todelete")
 as_tibble(friant_fnf_mostrecent)
 }
 ###### convert mostrecent's to long format, add attributes######
@@ -113,9 +122,12 @@ as_tibble(friant_fnf_mostrecent)
 friant_fnf_nextmostrecent_t <- friant_fnf_nextmostrecent %>% gather(key = "res", value = "value")
 nws_id <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
             "FRAC1", "FRAC1", "FRAC1", "FRAC1", "FRAC1")
-usbr_web_param <- c("stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest",
-                    "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_nextlatest", "stor_cvopublished_dlychnge_todelete", "meancfs_cvopublished_dlychnge_todelete", "meandlyinflowobs_cvopublished_nextlatest",
-                    "meanfnf_cvopublished_nextlatest", "wyaccum_cvopublished_nextlatest")
+usbr_web_param <- c("storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", 
+                    "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant",
+                    "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "upstrstorage_usbrcvo_nextlatest_instant", 
+                    "stor_usbrcvo_dlychnge_todelete", "meancfs_usbrcvo_dlychnge_todelete", 
+                    "inflow_usbrcvo_nextlatest_meandly",  "fullnaturalflow_usbrcvo_nextlatest_meandly", 
+                    "fullnaturalflow_usbrcvo_nextlatest_wyaccum")
 
 unit <- c("af", "af", "af", "af", "af", "af", "af", "af", "af", "af", "cfs", "cfs", "cfs", "taf")
 
@@ -129,7 +141,7 @@ as_tibble(friant_fnf_nextmostrecent)
 friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>% mutate(value = as.numeric(value)) 
 as_tibble(friant_fnf_nextmostrecent)
 friant_fnf_nextmostrecent <- friant_fnf_nextmostrecent %>%
-                             filter(usbr_web_param != "stor_cvopublished_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_cvopublished_dlychnge_todelete")
+                             filter(usbr_web_param != "stor_usbrcvo_dlychnge_todelete") %>% filter(usbr_web_param != "meancfs_usbrcvo_dlychnge_todelete")
 as_tibble(friant_fnf_nextmostrecent)
 }
 as_tibble(friant_fnf_mostrecent)
@@ -161,18 +173,46 @@ as_tibble(friant_fnf)
 
 friant_fnf <- friant_fnf %>% mutate(value = round(value, 0))
 
+friant_fnf$res<- gsub("Millerton_upstream_stor", "Millerton", friant_fnf$res ) 
+friant_fnf$res<- gsub("Millerton_observedinflow_meandaily", "Millerton", friant_fnf$res ) 
+friant_fnf$res<- gsub("Millerton_natriver_fnf", "Millerton", friant_fnf$res ) 
+friant_fnf$res<- gsub("Millerton_natriver_wyaccum", "Millerton", friant_fnf$res ) 
+
+
+friant_fnf <- friant_fnf %>%  separate(usbr_web_param, into = c("param_source_timeseq", "meastype"), sep="_(?=[^_]+$)") 
+#https://stackoverflow.com/questions/50518137/separate-a-column-into-2-columns-at-the-last-underscore-in-r
+friant_fnf <- friant_fnf %>%  separate(param_source_timeseq, into = c("param_source", "timeseq"), sep="_(?=[^_]+$)")
+friant_fnf <- friant_fnf %>%  separate(param_source, into = c("param", "source"), sep="_(?=[^_]+$)")
+
+as_tibble(friant_fnf)
+
+
+
+
+
+
+
+}
+
+
+
+## simply 3 units to 2
+friant_fnf <- friant_fnf %>% mutate(value = ifelse(unit == "taf", value * 1000 ,value)) %>% mutate(unit = ifelse(unit == "taf", "af", as.character(unit)))
+
+as_tibble(friant_fnf)
+}
+
+
+
+
+
 ## capacities (from various sources online, including wiki) ##
-
-
-}
-
 {
-res_id_nws <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
-res_cap <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252)
-res_cap <- data.frame(res_id_nws, res_cap)
-rm(res_id_nws)
-as_tibble(res_cap)
+  res_id_nws <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
+  res_cap <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252)
+  res_cap <- data.frame(res_id_nws, res_cap)
+  rm(res_id_nws)
+  as_tibble(res_cap)
 }
 
 
-}
