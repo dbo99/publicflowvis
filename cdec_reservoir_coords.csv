@@ -1,4 +1,9 @@
 res,res_name_cdec,cdecid, nwsid, lat_middleres_wgs84,lon_middleres_wgs84
+Britton, Britton, NA, BTOC1, 
+McCloud, McCloud, NA, BTOC1, 
+IronCanyon, IronCanyon, NA, BTOC1, 
+Pit6, Pit6, NA, BTOC1, 
+Pit7, Pit7, NA, BTOC1, 
 Trinity,Trinity,CLE,CEGC1, 40.83615,-122.78548
 Whiskeytown, Whiskeytown,WHI,WHSC1,40.62386,-122.56661
 Lewiston, Lewiston,LEW, LLKC1,40.74453,-122.80037
