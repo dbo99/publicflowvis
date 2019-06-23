@@ -2,8 +2,9 @@
 
 
 {
-rm(list = ls()) 
-#  rm(list=setdiff(ls(), "shasta_fnf", "friant_fnf", "newmelones_fnf"))
+#rm(list = ls()) 
+  rm(list= ls()[!(ls() %in% mainkeepers)])
+#  rm(list=setdiff(ls(), "shasta_fnf", "newmelones_fnf", "newmelones_fnf"))
 #setwd("~/R/proj/publicflowscrapeapp")
 setwd("~/Documents/publicflowvis")
 source("libs.r")
@@ -17,7 +18,7 @@ month_year <- month_year[,2] %>% trimws() %>% as.yearmon()
 month <- month(month_year)
 year <- year(month_year)
 start <- "\n    1"
-end <- "\n TOTALS"  #Friant and Shasta have more white space in between `n` and `TOTALS`
+end <- "\n TOTALS"  #newmelones and Shasta have more white space in between `n` and `TOTALS`
 newmelones_fnf <- read.table(text=substring(rawtext, regexpr(start, rawtext), regexpr(end, rawtext)))
 
 rm(start, end, month_year, rawtext)
@@ -72,7 +73,7 @@ as_tibble(newmelones_fnf_mostrecent)
 ###### convert mostrecent's to long format, add attributes######
 #{
 newmelones_fnf_mostrecent_t <- newmelones_fnf_mostrecent %>% gather(key = "res", value = "value")
-nws_id <- c("DLLC1", "BESC1",  "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1")
+nwsid <- c("DLLC1", "BESC1",  "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1")
 
 usbr_web_param <- c("storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "upstrstorage_usbrcvo_latest_instant", 
                     "stor_usbrcvo_dlychnge_todelete",  "meancfs_usbrcvo_dlychnge_todelete", 
@@ -81,8 +82,8 @@ usbr_web_param <- c("storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_in
 
 unit <-  c("af", "af", "af", "af", "cfs","cfs", "cfs", "taf")
 as_tibble(newmelones_fnf_mostrecent_t)
-newmelones_fnf_mostrecent <- cbind(newmelones_fnf_mostrecent_t, nws_id,  unit, usbr_web_param)
-rm(newmelones_fnf_mostrecent_t, unit, nws_id, usbr_web_param)
+newmelones_fnf_mostrecent <- cbind(newmelones_fnf_mostrecent_t, nwsid,  unit, usbr_web_param)
+rm(newmelones_fnf_mostrecent_t, unit, nwsid, usbr_web_param)
 as_tibble(newmelones_fnf_mostrecent)
 
 newmelones_fnf_mostrecent$value <- gsub(",", "", newmelones_fnf_mostrecent$value )
@@ -102,7 +103,7 @@ as_tibble(newmelones_fnf_mostrecent)
 
 {
   newmelones_fnf_nextmostrecent_t <- newmelones_fnf_nextmostrecent %>% gather(key = "res", value = "value")
-  nws_id <- c("DLLC1", "BESC1",  "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1")
+  nwsid <- c("DLLC1", "BESC1",  "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1", "NMSC1")
   
   usbr_web_param <- c("storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "upstrstorage_usbrcvo_nextlatest_instant", 
                       "stor_usbrcvo_dlychnge_todelete",  "meancfs_usbrcvo_dlychnge_todelete", 
@@ -110,8 +111,8 @@ as_tibble(newmelones_fnf_mostrecent)
                       "fullnaturalflow_usbrcvo_nextlatest_meandly", "fullnaturalflow_usbrcvo_nextlatest_wyaccum")
   
   unit <-  c("af", "af", "af", "af", "cfs","cfs", "cfs", "taf")
-  newmelones_fnf_nextmostrecent <- cbind(newmelones_fnf_nextmostrecent_t, nws_id, usbr_web_param, unit)
-  rm(newmelones_fnf_nextmostrecent_t, unit, nws_id)#usbr_web_param
+  newmelones_fnf_nextmostrecent <- cbind(newmelones_fnf_nextmostrecent_t, nwsid, usbr_web_param, unit)
+  rm(newmelones_fnf_nextmostrecent_t, unit, nwsid)#usbr_web_param
   as_tibble(newmelones_fnf_nextmostrecent)
   
   newmelones_fnf_nextmostrecent$value <- gsub(",", "", newmelones_fnf_nextmostrecent$value )
@@ -133,7 +134,7 @@ as_tibble(newmelones_fnf_nextmostrecent)
   as_tibble(newmelones_fnf_dlychnge)
   newmelones_fnf_dlychnge <- newmelones_fnf_dlychnge %>% mutate(value = value.x - value.y)
   as_tibble(newmelones_fnf_dlychnge)
-  newmelones_fnf_dlychnge <- newmelones_fnf_dlychnge %>% transmute(res, value, nws_id = nws_id.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
+  newmelones_fnf_dlychnge <- newmelones_fnf_dlychnge %>% transmute(res, value, nwsid = nwsid.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
   newmelones_fnf_dlychnge <- newmelones_fnf_dlychnge %>% mutate(date = date_mostrecent)
   newmelones_fnf_dlychnge$usbr_web_param <- gsub("nextlatest", "dailychange", newmelones_fnf_dlychnge$usbr_web_param ) 
   
@@ -173,7 +174,7 @@ newmelones_fnf <- newmelones_fnf %>%  separate(param_source, into = c("param", "
 as_tibble(newmelones_fnf)
 
 
-}
+
 
 
 
@@ -182,13 +183,108 @@ newmelones_fnf <- newmelones_fnf %>% mutate(value = ifelse(unit == "taf", value 
 as_tibble(newmelones_fnf)
 #}
 
-
-## capacities (from various sources online, including wiki) ##
+## add rows for res capacities
 {
-  res_id_nws <- c("DLLC1", "BESC1", "NMSC1")
-  res_cap <- c(56.83, 97.8, 2400)  #taf
-  res_cap <- data.frame(res_id_nws, res_cap)
-  rm(res_id_nws)
-  as_tibble(res_cap)
+  #  ## capacities (from various sources online, including wiki) ##
+  res <- c("Donnell", "Beardsley", "NewMelones")
+  numres <- length(res)
+  value <- c(56.83, 97.8) * 1000  #af
+  combined <- sum(value)
+  value <- c(value, combined)
+  nwsid <- c("DLLC1", "BESC1", "NMSC1")
+  param <- c(rep("totalcapacity", numres - 1), "upstrtotalcapacity")
+  source <- rep(NA, numres)
+  timeseq <- rep(NA, numres)
+  meastype <- rep("instant", numres )
+  unit <- rep("af", numres)
+  date <- rep(NA, numres)
+  res_cap <- data.frame(cbind(res, value, nwsid, param, source, timeseq, meastype, unit, date)) #%>% mutate(capacity = as.double(capacity))
+}
+#
+newmelones_fnf <- rbind(newmelones_fnf, res_cap) %>% mutate(value = as.character(value), value = as.double(value))
+rm(res_cap)
+#
+#
+### new df to join to main df for percent capacity calc
+{
+  #  ## capacities (from various sources online, including wiki) ##
+  res <- c("Donnell", "Beardsley")
+  capacity <- c(56.83, 97.8) * 1000 #note named capacity, not value - removed below
+  nwsid <-  nwsid <- c("DLLC1", "BESC1")
+  res_cap <- data.frame(cbind(res, capacity, nwsid)) 
 }
 
+
+## latest percent cap
+newmelones_fnf_percap_latest <- newmelones_fnf %>% filter(param == "storage") %>% filter( timeseq == "latest") 
+newmelones_fnf_percap_latest <- right_join(newmelones_fnf_percap_latest, res_cap) %>% mutate(capacity = as.character(capacity), 
+                                                                                     capacity = as.double(capacity))
+newmelones_fnf_percap_latest <- newmelones_fnf_percap_latest %>% mutate(value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+newmelones_fnf_percap_latest_upstr <- newmelones_fnf %>% filter(param == "upstrstorage") %>% filter( timeseq == "latest") %>% 
+  mutate(capacity = sum(capacity), value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+newmelones_fnf_percap_latest_upstr_val <- newmelones_fnf_percap_latest_upstr$value
+
+## next latest percent cap
+newmelones_fnf_percap_nextlatest <- newmelones_fnf %>% filter(param == "storage") %>% filter( timeseq == "nextlatest") 
+newmelones_fnf_percap_nextlatest <- right_join(newmelones_fnf_percap_nextlatest, res_cap) %>% mutate(capacity = as.character(capacity), 
+                                                                                             capacity = as.double(capacity))
+newmelones_fnf_percap_nextlatest <- newmelones_fnf_percap_nextlatest %>% mutate(value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+newmelones_fnf_percap_nextlatest_upstr <- newmelones_fnf %>% filter(param == "upstrstorage") %>% filter( timeseq == "nextlatest") %>% 
+  mutate(capacity = sum(capacity), value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+newmelones_fnf_percap_nextlatest_upstr_val <- newmelones_fnf_percap_nextlatest_upstr$value
+
+newmelones_fnf_percap_nextlatest_upstr_valchange <- newmelones_fnf_percap_latest_upstr_val - newmelones_fnf_percap_nextlatest_upstr_val
+newmelones_fnf_percap_nextlatest_upstr_valchange <- newmelones_fnf_percap_nextlatest_upstr %>%
+  mutate(value = newmelones_fnf_percap_nextlatest_upstr_valchange, timeseq = "dailychange")
+## rbind
+newmelones_fnf<- rbind(newmelones_fnf, newmelones_fnf_percap_latest, newmelones_fnf_percap_nextlatest, newmelones_fnf_percap_latest_upstr, newmelones_fnf_percap_nextlatest_upstr,
+                   newmelones_fnf_percap_nextlatest_upstr_valchange)
+
+## create percent empty and capacity remaining
+
+newmelones_fnf_percentempty <- newmelones_fnf %>% filter(unit == "percentfull", timeseq != "dailychange") %>% mutate(value = 100 - value, unit = "percentempty")
+newmelones_fnf <- rbind(newmelones_fnf, newmelones_fnf_percentempty)
+
+
+## create volume remaining 
+newmelones_fnf_totcap <- newmelones_fnf %>% filter(param == "totalcapacity" | param == "upstrtotalcapacity") %>% select(value, nwsid, param) 
+
+newmelones_fnf_stor_latest <- newmelones_fnf %>% filter(param == "storage" | param == "upstrstorage", timeseq == "latest", unit == "af")
+newmelones_remainingcap_latest <- left_join(newmelones_fnf_stor_latest, newmelones_fnf_totcap, by = "nwsid" , "param") %>% 
+  mutate(value = value.y - value.x, param = ifelse(param == "upstrstorage", "remainingupstrcapacity", "remainingcapacity")) %>% select(-value.x, -value.y, -param.x, -param.y)
+
+
+newmelones_fnf_stor_nextlatest <- newmelones_fnf %>% filter(param == "storage" | param == "upstrstorage", timeseq == "nextlatest", unit == "af")
+newmelones_remainingcap_nextlatest <- left_join(newmelones_fnf_stor_nextlatest, newmelones_fnf_totcap, by = "nwsid" , "param") %>% 
+  mutate(value = value.y - value.x, param = ifelse(param.x == "upstrstorage", "remainingupstrcapacity", "remainingcapacity")) %>% select(-value.x, -value.y, -param.x, -param.y)
+
+newmelones_fnf <- rbind(newmelones_fnf, newmelones_remainingcap_latest, newmelones_remainingcap_nextlatest )
+
+## percentfull dailychange
+
+newmelones_fnf_perc_change_latest <- newmelones_fnf %>% filter(param == "storage", timeseq == "latest", unit == "percentfull") %>% select(value, nwsid, param) 
+newmelones_fnf_perc_change_nextlatest <- newmelones_fnf %>% filter(param == "storage", timeseq == "nextlatest", unit == "percentfull") 
+newmelones_fnf_perc_change <- left_join(newmelones_fnf_perc_change_latest, newmelones_fnf_perc_change_nextlatest,  by = "nwsid" , "param") %>%
+  mutate(value = round((value.x - value.y)/value.x * 100,1) , timeseq = "dailychange", param = "storage") %>% 
+  select(-param.x, -param.y, -value.x, -value.y) %>% mutate(unit = "percentchange")
+
+newmelones_fnf <- rbind(newmelones_fnf, newmelones_fnf_perc_change)
+newmelones_fnf <- data.frame(newmelones_fnf) %>% mutate(value = unlist(value)) %>% select(-source) %>% rename_all(paste0, "_usbr") %>% 
+  mutate(nwsid = nwsid_usbr) %>% select(-nwsid_usbr)
+
+rm(list= ls()[!(ls() %in% mainkeepers)])
+as_tibble(newmelones_fnf)
+
+
+
+}
+  
+#}

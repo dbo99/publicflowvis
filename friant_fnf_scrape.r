@@ -3,7 +3,7 @@
 
 {
 #rm(list = ls()) 
-  rm(list=setdiff(ls(),  "shasta_fnf"))
+  rm(list= ls()[!(ls() %in% mainkeepers)])
 #setwd("~/R/proj/publicflowscrapeapp")
 setwd("~/Documents/publicflowvis")
 source("libs.r")
@@ -89,7 +89,7 @@ as_tibble(friant_fnf_mostrecent)
 ###### convert mostrecent's to long format, add attributes######
 {
 friant_fnf_mostrecent_t <- friant_fnf_mostrecent %>% gather(key = "res", value = "value")
-nws_id <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
+nwsid <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
                     "FRAC1", "FRAC1", "FRAC1", "FRAC1", "FRAC1")
 usbr_web_param <- c("storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", 
                     "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant",
@@ -100,8 +100,8 @@ usbr_web_param <- c("storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_in
 
 unit <- c("af", "af", "af", "af", "af", "af", "af", "af", "af", "af", "cfs", "cfs", "cfs", "taf")
 
-friant_fnf_mostrecent <- cbind(friant_fnf_mostrecent_t, nws_id, usbr_web_param, unit)
-rm(friant_fnf_mostrecent_t, unit, usbr_web_param, nws_id)
+friant_fnf_mostrecent <- cbind(friant_fnf_mostrecent_t, nwsid, usbr_web_param, unit)
+rm(friant_fnf_mostrecent_t, unit, usbr_web_param, nwsid)
 as_tibble(friant_fnf_mostrecent)
 
 friant_fnf_mostrecent$value <- gsub(",", "", friant_fnf_mostrecent$value )
@@ -120,7 +120,7 @@ as_tibble(friant_fnf_mostrecent)
 
 {
 friant_fnf_nextmostrecent_t <- friant_fnf_nextmostrecent %>% gather(key = "res", value = "value")
-nws_id <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
+nwsid <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1", 
             "FRAC1", "FRAC1", "FRAC1", "FRAC1", "FRAC1")
 usbr_web_param <- c("storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", 
                     "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant",
@@ -131,8 +131,8 @@ usbr_web_param <- c("storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextl
 
 unit <- c("af", "af", "af", "af", "af", "af", "af", "af", "af", "af", "cfs", "cfs", "cfs", "taf")
 
-friant_fnf_nextmostrecent <- cbind(friant_fnf_nextmostrecent_t, nws_id, usbr_web_param, unit)
-rm(friant_fnf_nextmostrecent_t, unit, usbr_web_param, nws_id)
+friant_fnf_nextmostrecent <- cbind(friant_fnf_nextmostrecent_t, nwsid, usbr_web_param, unit)
+rm(friant_fnf_nextmostrecent_t, unit, usbr_web_param, nwsid)
 as_tibble(friant_fnf_nextmostrecent)
 
 friant_fnf_nextmostrecent$value <- gsub(",", "", friant_fnf_nextmostrecent$value )
@@ -153,7 +153,7 @@ friant_fnf_dlychnge <- inner_join(friant_fnf_mostrecent, friant_fnf_nextmostrece
 as_tibble(friant_fnf_dlychnge)
 friant_fnf_dlychnge <- friant_fnf_dlychnge %>% mutate(value = value.x - value.y)
 as_tibble(friant_fnf_dlychnge)
-friant_fnf_dlychnge <- friant_fnf_dlychnge %>% transmute(res, value, nws_id = nws_id.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
+friant_fnf_dlychnge <- friant_fnf_dlychnge %>% transmute(res, value, nwsid = nwsid.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
 friant_fnf_dlychnge <- friant_fnf_dlychnge %>% mutate(date = date_mostrecent)
 friant_fnf_dlychnge$usbr_web_param <- gsub("nextlatest", "dailychange", friant_fnf_dlychnge$usbr_web_param ) 
                                   
@@ -186,33 +186,113 @@ friant_fnf <- friant_fnf %>%  separate(param_source, into = c("param", "source")
 
 as_tibble(friant_fnf)
 
-
-
-
-
-
-
 }
 
-
-
-## simply 3 units to 2
+## 3 units to 2
 friant_fnf <- friant_fnf %>% mutate(value = ifelse(unit == "taf", value * 1000 ,value)) %>% mutate(unit = ifelse(unit == "taf", "af", as.character(unit)))
 
 as_tibble(friant_fnf)
-}
 
 
-
-
-
-## capacities (from various sources online, including wiki) ##
+## add rows for res capacities
 {
-  res_id_nws <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
-  res_cap <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252)
-  res_cap <- data.frame(res_id_nws, res_cap)
-  rm(res_id_nws)
-  as_tibble(res_cap)
+#  ## capacities (from various sources online, including wiki) ##
+res <- c("Edison", "Florence", "Huntington", "Shaver", "MammothPool", "Redinger", "CraneValley", "Kerckhoff", "Millerton")
+  numres <- length(res)
+  value <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252) * 1000  #af
+  combined <- sum(value)
+  value <- c(value, combined)
+  nwsid <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1", "FRAC1")
+  param <- c(rep("totalcapacity", numres - 1), "upstrtotalcapacity")
+  source <- rep(NA, numres)
+  timeseq <- rep(NA, numres)
+  meastype <- rep("instant", numres )
+  unit <- rep("af", numres)
+  date <- rep(NA, numres)
+  res_cap <- data.frame(cbind(res, value, nwsid, param, source, timeseq, meastype, unit, date)) #%>% mutate(capacity = as.double(capacity))
+}
+#
+friant_fnf <- rbind(friant_fnf, res_cap) %>% mutate(value = as.character(value), value = as.double(value))
+rm(res_cap)
+#
+#
+### new df to join to main df for percent capacity calc
+{
+#  ## capacities (from various sources online, including wiki) ##
+ res <- c("Edison", "Florence", "Huntington", "Shaver", "MammothPool", "Redinger", "CraneValley", "Kerckhoff") #friant's storage itself not published on fnf site
+ capacity <- c(125.0, 64.6, 88.834, 135.283, 123.0, 35.0, 45.4, 4.252) * 1000 #note named capacity, not value - removed below
+ nwsid <- c("TAEC1", "FLEC1", "HNTC1", "SAVC1", "MPLC1", "RGRC1", "BASC1", "KRHC1")
+ res_cap <- data.frame(cbind(res, capacity, nwsid)) 
 }
 
+## latest percent cap
+friant_fnf_percap_latest <- friant_fnf %>% filter(param == "storage") %>% filter( timeseq == "latest") 
+friant_fnf_percap_latest <- right_join(friant_fnf_percap_latest, res_cap) %>% mutate(capacity = as.character(capacity), 
+                                                                                     capacity = as.double(capacity))
+friant_fnf_percap_latest <- friant_fnf_percap_latest %>% mutate(value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
 
+friant_fnf_percap_latest_upstr <- friant_fnf %>% filter(param == "upstrstorage") %>% filter( timeseq == "latest") %>% 
+  mutate(capacity = sum(capacity), value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+friant_fnf_percap_latest_upstr_val <- friant_fnf_percap_latest_upstr$value
+
+## next latest percent cap
+friant_fnf_percap_nextlatest <- friant_fnf %>% filter(param == "storage") %>% filter( timeseq == "nextlatest") 
+friant_fnf_percap_nextlatest <- right_join(friant_fnf_percap_nextlatest, res_cap) %>% mutate(capacity = as.character(capacity), 
+                                                                                             capacity = as.double(capacity))
+friant_fnf_percap_nextlatest <- friant_fnf_percap_nextlatest %>% mutate(value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+friant_fnf_percap_nextlatest_upstr <- friant_fnf %>% filter(param == "upstrstorage") %>% filter( timeseq == "nextlatest") %>% 
+  mutate(capacity = sum(capacity), value = value/capacity * 100) %>%
+  mutate(value = round(value, 1), unit = "percentfull") %>% select(-capacity)
+
+friant_fnf_percap_nextlatest_upstr_val <- friant_fnf_percap_nextlatest_upstr$value
+
+friant_fnf_percap_nextlatest_upstr_valchange <- friant_fnf_percap_latest_upstr_val - friant_fnf_percap_nextlatest_upstr_val
+friant_fnf_percap_nextlatest_upstr_valchange <- friant_fnf_percap_nextlatest_upstr %>%
+  mutate(value = friant_fnf_percap_nextlatest_upstr_valchange, timeseq = "dailychange")
+## rbind
+friant_fnf<- rbind(friant_fnf, friant_fnf_percap_latest, friant_fnf_percap_nextlatest, friant_fnf_percap_latest_upstr, friant_fnf_percap_nextlatest_upstr,
+                   friant_fnf_percap_nextlatest_upstr_valchange)
+
+## create percent empty and capacity remaining
+
+friant_fnf_percentempty <- friant_fnf %>% filter(unit == "percentfull", timeseq != "dailychange") %>% mutate(value = 100 - value, unit = "percentempty")
+friant_fnf <- rbind(friant_fnf, friant_fnf_percentempty)
+
+
+## create volume remaining 
+friant_fnf_totcap <- friant_fnf %>% filter(param == "totalcapacity" | param == "upstrtotalcapacity") %>% select(value, nwsid, param) 
+
+friant_fnf_stor_latest <- friant_fnf %>% filter(param == "storage" | param == "upstrstorage", timeseq == "latest", unit == "af")
+friant_remainingcap_latest <- left_join(friant_fnf_stor_latest, friant_fnf_totcap, by = "nwsid" , "param") %>% 
+  mutate(value = value.y - value.x, param = ifelse(param == "upstrstorage", "remainingupstrcapacity", "remainingcapacity")) %>% select(-value.x, -value.y, -param.x, -param.y)
+
+
+friant_fnf_stor_nextlatest <- friant_fnf %>% filter(param == "storage" | param == "upstrstorage", timeseq == "nextlatest", unit == "af")
+friant_remainingcap_nextlatest <- left_join(friant_fnf_stor_nextlatest, friant_fnf_totcap, by = "nwsid" , "param") %>% 
+  mutate(value = value.y - value.x, param = ifelse(param.x == "upstrstorage", "remainingupstrcapacity", "remainingcapacity")) %>% select(-value.x, -value.y, -param.x, -param.y)
+
+friant_fnf <- rbind(friant_fnf, friant_remainingcap_latest, friant_remainingcap_nextlatest )
+
+## percentfull dailychange
+
+friant_fnf_perc_change_latest <- friant_fnf %>% filter(param == "storage", timeseq == "latest", unit == "percentfull") %>% select(value, nwsid, param) 
+friant_fnf_perc_change_nextlatest <- friant_fnf %>% filter(param == "storage", timeseq == "nextlatest", unit == "percentfull") 
+friant_fnf_perc_change <- left_join(friant_fnf_perc_change_latest, friant_fnf_perc_change_nextlatest,  by = "nwsid" , "param") %>%
+                        mutate(value = round((value.x - value.y)/value.x * 100,1) , timeseq = "dailychange", param = "storage") %>% 
+                        select(-param.x, -param.y, -value.x, -value.y) %>% mutate(unit = "percentchange")
+
+friant_fnf <- rbind(friant_fnf, friant_fnf_perc_change)
+friant_fnf <- data.frame(friant_fnf) %>% mutate(value = unlist(value)) %>% select(-source) %>% rename_all(paste0, "_usbr") %>% 
+  mutate(nwsid = nwsid_usbr) %>% select(-nwsid_usbr)
+
+rm(list= ls()[!(ls() %in% mainkeepers)])
+as_tibble(friant_fnf)
+
+
+
+}

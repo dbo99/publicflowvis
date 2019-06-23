@@ -3,10 +3,9 @@
 {
 {
 #rm(list = ls()) 
-  rm(list= ls()[!(ls() %in% c('friant_fnf','newmelones_fnf'))])
+  rm(list= ls()[!(ls() %in% mainkeepers)])
   #setwd("~/R/proj/publicflowscrapeapp")
-setwd("~/Documents/publicflowvis")
-source("libs.r")
+
 
 file <- "https://www.usbr.gov/mp/cvo/vungvari/shafln.pdf"
 rawtext  <- pdf_text(file)
@@ -45,7 +44,7 @@ rm(shasta_fnf, nrow_shasta_fnf )
                                                              "Shasta_observedinflowchange_meandaily" = !!names(.[9]),
                                                              "Shasta_observedinflow_meandaily" = !!names(.[10]),
                                                              "Shasta_natriver_fnf" = !!names(.[11]),
-                                                             "Shasta_natriver_WYaccum" = !!names(.[12]))
+                                                             "Shasta_natriver_wyaccum" = !!names(.[12]))
 
 as_tibble(shasta_fnf_mostrecent)
 }
@@ -69,7 +68,7 @@ shasta_fnf_mostrecent <- shasta_fnf_mostrecent %>% select(-monthday)
                                                                      "Shasta_observedinflowchange_meandaily" = !!names(.[9]),
                                                                      "Shasta_observedinflow_meandaily" = !!names(.[10]),
                                                                      "Shasta_natriver_fnf" = !!names(.[11]),
-                                                                     "Shasta_natriver_WYaccum" = !!names(.[12])) %>% select(-monthday) 
+                                                                     "Shasta_natriver_wyaccum" = !!names(.[12])) %>% select(-monthday) 
 }
 
 
@@ -78,7 +77,7 @@ as_tibble(shasta_fnf_mostrecent)
 ###### convert mostrecent's to long format, add attributes######
 #{
   shasta_fnf_mostrecent_t <- shasta_fnf_mostrecent %>% gather(key = "res", value = "value")
-  nws_id <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1", "SHDC1", "SHDC1", "SHDC1", 
+  nwsid <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1", "SHDC1", "SHDC1", "SHDC1", 
               "SHDC1", "SHDC1")
 
   usbr_web_param <- c("storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", "storage_usbrcvo_latest_instant", 
@@ -89,8 +88,8 @@ as_tibble(shasta_fnf_mostrecent)
   
   unit <-  c("af", "af", "af", "af", "af", "af", "af", "af","cfs", "cfs", "taf")
   as_tibble(shasta_fnf_mostrecent_t)
-  shasta_fnf_mostrecent <- cbind(shasta_fnf_mostrecent_t, nws_id, usbr_web_param, unit)
-  rm(shasta_fnf_mostrecent_t, unit, usbr_web_param, nws_id)
+  shasta_fnf_mostrecent <- cbind(shasta_fnf_mostrecent_t, nwsid, usbr_web_param, unit)
+  rm(shasta_fnf_mostrecent_t, unit, usbr_web_param, nwsid)
   as_tibble(shasta_fnf_mostrecent)
   
   shasta_fnf_mostrecent$value <- gsub(",", "", shasta_fnf_mostrecent$value )
@@ -109,7 +108,7 @@ as_tibble(shasta_fnf_mostrecent)
 
 {
   shasta_fnf_nextmostrecent_t <- shasta_fnf_nextmostrecent %>% gather(key = "res", value = "value")
-  nws_id <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1", "SHDC1", "SHDC1", "SHDC1", 
+  nwsid <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1", "SHDC1", "SHDC1", "SHDC1", 
               "SHDC1", "SHDC1")
   usbr_web_param <- c("storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", 
                       "storage_usbrcvo_nextlatest_instant", "storage_usbrcvo_nextlatest_instant", "upstrstorage_usbrcvo_nextlatest_instant",
@@ -118,8 +117,8 @@ as_tibble(shasta_fnf_mostrecent)
                       "fullnaturalflow_usbrcvo_nextlatest_meandly", "fullnaturalflow_usbrcvo_nextlatest_wyaccum")
   
   unit <-  c("af", "af", "af", "af", "af", "af", "af", "af","cfs", "cfs", "taf")
-  shasta_fnf_nextmostrecent <- cbind(shasta_fnf_nextmostrecent_t, nws_id, usbr_web_param, unit)
-  rm(shasta_fnf_nextmostrecent_t, unit, usbr_web_param, nws_id)
+  shasta_fnf_nextmostrecent <- cbind(shasta_fnf_nextmostrecent_t, nwsid, usbr_web_param, unit)
+  rm(shasta_fnf_nextmostrecent_t, unit, usbr_web_param, nwsid)
   as_tibble(shasta_fnf_nextmostrecent)
   
   shasta_fnf_nextmostrecent$value <- gsub(",", "", shasta_fnf_nextmostrecent$value )
@@ -140,7 +139,7 @@ as_tibble(shasta_fnf_nextmostrecent)
   as_tibble(shasta_fnf_dlychnge)
   shasta_fnf_dlychnge <- shasta_fnf_dlychnge %>% mutate(value = value.x - value.y)
   as_tibble(shasta_fnf_dlychnge)
-  shasta_fnf_dlychnge <- shasta_fnf_dlychnge %>% transmute(res, value, nws_id = nws_id.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
+  shasta_fnf_dlychnge <- shasta_fnf_dlychnge %>% transmute(res, value, nwsid = nwsid.x, usbr_web_param = usbr_web_param.y, unit = unit.x)
   shasta_fnf_dlychnge <- shasta_fnf_dlychnge %>% mutate(date = date_mostrecent)
   shasta_fnf_dlychnge$usbr_web_param <- gsub("nextlatest", "dailychange", shasta_fnf_dlychnge$usbr_web_param ) 
   
@@ -165,7 +164,7 @@ as_tibble(shasta_fnf_nextmostrecent)
 shasta_fnf$res<- gsub("Shasta_upstream_stor", "Shasta", shasta_fnf$res ) 
 shasta_fnf$res<- gsub("Shasta_observedinflow_meandaily", "Shasta", shasta_fnf$res ) 
 shasta_fnf$res<- gsub("Shasta_natriver_fnf", "Shasta", shasta_fnf$res ) 
-shasta_fnf$res<- gsub("Shasta_natriver_WYaccum", "Shasta", shasta_fnf$res ) 
+shasta_fnf$res<- gsub("Shasta_natriver_wyaccum", "Shasta", shasta_fnf$res ) 
 shasta_fnf$res<- gsub("McCloudDivRes", "McCloud", shasta_fnf$res ) 
 #shasta_fnf$res<- gsub("IronCanyon", "IronCanyon", shasta_fnf$res ) 
 
@@ -177,7 +176,7 @@ shasta_fnf <- shasta_fnf %>%  separate(param_source, into = c("param", "source")
 
 as_tibble(shasta_fnf)
 
-## simply 3 units to 2
+## 3 units to 2
 shasta_fnf <- shasta_fnf %>% mutate(value = ifelse(unit == "taf", value * 1000 ,value)) %>% mutate(unit = ifelse(unit == "taf", "af", as.character(unit)))
 
 as_tibble(shasta_fnf)
@@ -191,14 +190,14 @@ as_tibble(shasta_fnf)
   value <- c(34600, 35200, 24300, 15700, 34100)  #af
   combined <- sum(value)
   value <- c(value, combined)
-  nws_id <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1")
+  nwsid <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1", "SHDC1")
   param <- c(rep("totalcapacity", numres - 1), "upstrtotalcapacity")
   source <- rep(NA, numres)
   timeseq <- rep(NA, numres)
   meastype <- rep("instant", numres )
   unit <- rep("af", numres)
   date <- rep(NA, numres)
-  res_cap <- data.frame(cbind(res, value, nws_id, param, source, timeseq, meastype, unit, date)) #%>% mutate(capacity = as.double(capacity))
+  res_cap <- data.frame(cbind(res, value, nwsid, param, source, timeseq, meastype, unit, date)) 
 }
 
 shasta_fnf <- rbind(shasta_fnf, res_cap) %>% mutate(value = as.character(value), value = as.double(value))
@@ -209,10 +208,9 @@ rm(res_cap)
 {
   ## capacities (from various sources online, including wiki) ##
   res <- c("Britton", "McCloud", "IronCanyon", "Pit6", "Pit7") #Shasta's storage itself not published on fnf site
-  #numres <- length(res)
   capacity <- c(34600, 35200, 24300, 15700, 34100)  #note named capacity, not value - removed below
-  nws_id <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1")
-  res_cap <- data.frame(cbind(res, capacity, nws_id)) #%>% mutate(capacity = as.double(capacity))
+  nwsid <- c("BTOC1", "MCZC1", "ICYC1", "PTXC1", "PTZC1")
+  res_cap <- data.frame(cbind(res, capacity, nwsid)) #%>% mutate(capacity = as.double(capacity))
 }
 
 
@@ -250,26 +248,40 @@ shasta_fnf_percap_nextlatest_upstr_valchange <- shasta_fnf_percap_nextlatest_ups
 shasta_fnf<- rbind(shasta_fnf, shasta_fnf_percap_latest, shasta_fnf_percap_nextlatest, shasta_fnf_percap_latest_upstr, shasta_fnf_percap_nextlatest_upstr,
                    shasta_fnf_percap_nextlatest_upstr_valchange)
 
-## create percent empty and inactive capacity remaining
+## create percent empty and capacity remaining
 
-shasta_fnf_percentempty <- shasta_fnf %>% filter(unit == "percentfull", timeseq != "dailychange") %>% mutate(value = 100 - value, unit = "percentempty")
+#shasta_fnf_percentempty <- shasta_fnf %>% filter(unit == "percentfull", timeseq != "dailychange") %>% mutate(value = 100 - value, unit = "percentempty")
+shasta_fnf_percentempty <- shasta_fnf %>% filter(unit == "percentfull") %>% mutate(value = 100 - value, unit = "percentempty")
 shasta_fnf <- rbind(shasta_fnf, shasta_fnf_percentempty)
 
 
 ## create volume remaining 
-shasta_fnf_totcap <- shasta_fnf %>% filter(param == "totalcapacity" | param == "upstrtotalcapacity") %>% select(value, nws_id, param) 
+shasta_fnf_totcap <- shasta_fnf %>% filter(param == "totalcapacity" | param == "upstrtotalcapacity") %>% select(value, nwsid, param) 
 
 shasta_fnf_stor_latest <- shasta_fnf %>% filter(param == "storage" | param == "upstrstorage", timeseq == "latest", unit == "af")
-shasta_remainingcap_latest <- left_join(shasta_fnf_stor_latest, shasta_fnf_totcap, by = "nws_id" , "param") %>% 
-                   mutate(value = value.y - value.x, param = "remainingcapacity") %>% select(-value.x, -value.y, -param.x, -param.y)
+shasta_remainingcap_latest <- left_join(shasta_fnf_stor_latest, shasta_fnf_totcap, by = "nwsid" , "param") %>% 
+                   mutate(value = value.y - value.x, param = ifelse(param == "upstrstorage", "remainingupstrcapacity", "remainingcapacity")) %>% select(-value.x, -value.y, -param.x, -param.y)
 
 
 shasta_fnf_stor_nextlatest <- shasta_fnf %>% filter(param == "storage" | param == "upstrstorage", timeseq == "nextlatest", unit == "af")
-shasta_remainingcap_nextlatest <- left_join(shasta_fnf_stor_nextlatest, shasta_fnf_totcap, by = "nws_id" , "param") %>% 
-  mutate(value = value.y - value.x, param = "remainingcapacity") %>% select(-value.x, -value.y, -param.x, -param.y)
+shasta_remainingcap_nextlatest <- left_join(shasta_fnf_stor_nextlatest, shasta_fnf_totcap, by = "nwsid" , "param") %>% 
+  mutate(value = value.y - value.x, param = ifelse(param.x == "upstrstorage", "remainingupstrcapacity", "remainingcapacity")) %>% select(-value.x, -value.y, -param.x, -param.y)
                                                                                                          
 shasta_fnf <- rbind(shasta_fnf, shasta_remainingcap_latest, shasta_remainingcap_nextlatest )
 
-rm(list= ls()[!(ls() %in% c('friant_fnf','newmelones_fnf', 'shasta_fnf'))])
+
+shasta_fnf_perc_change_latest <- shasta_fnf %>% filter(param == "storage", timeseq == "latest", unit == "percentfull") %>% select(value, nwsid, param) 
+shasta_fnf_perc_change_nextlatest <- shasta_fnf %>% filter(param == "storage", timeseq == "nextlatest", unit == "percentfull") 
+shasta_fnf_perc_change <- left_join(shasta_fnf_perc_change_latest, shasta_fnf_perc_change_nextlatest,  by = "nwsid" , "param") %>%
+  mutate(value = round((value.x - value.y)/value.x * 100,1) , timeseq = "dailychange", param = "storage") %>% 
+  select(-param.x, -param.y, -value.x, -value.y) %>% mutate(unit = "percentchange")
+
+shasta_fnf <- rbind(shasta_fnf, shasta_fnf_perc_change)
+shasta_fnf <- data.frame(shasta_fnf) %>% mutate(value = unlist(value)) %>% select(-source) %>% rename_all(paste0, "_usbr") %>% 
+  mutate(nwsid = nwsid_usbr) %>% select(-nwsid_usbr)
+
+
+
+rm(list= ls()[!(ls() %in% mainkeepers)])
 as_tibble(shasta_fnf)
 }
