@@ -1,4 +1,4 @@
-res,res_name_cdec,cdecid, nwsid, lat_middleres_wgs84,lon_middleres_wgs84
+res,res_cdec,cdecid, nwsid, lat_middleres_wgs84,lon_middleres_wgs84
 Britton, NA, NA, BTOC1, 41.029590, -121.64527
 McCloud, NA, NA, MCZC1, 41.134369, -122.074810
 IronCanyon, NA, NA, ICYC1, 41.043864, -121.984952
