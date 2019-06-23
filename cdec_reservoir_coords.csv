@@ -2,7 +2,7 @@ res,res_name_cdec,cdecid, nwsid, lat_middleres_wgs84,lon_middleres_wgs84
 Trinity,Trinity,CLE,CEGC1, 40.83615,-122.78548
 Whiskeytown, Whiskeytown,WHI,WHSC1,40.62386,-122.56661
 Lewiston, Lewiston,LEW, LLKC1,40.74453,-122.80037
-Sonoma_warmspring, Sonoma (Warm Springs),WRS, NA, 38.69475,-123.02397
+Sonoma_warmspring, Sonoma (Warm Springs),WRS, WSDC1, 38.69475,-123.02397
 Mendocino_coyote,Mendocino (Coyote),COY,NA, 39.21769,-123.17339
 Shasta,Shasta,SHA,SHDC1, 40.77326,-122.37207
 Keswick, Keswick,KES, KWKC1, 40.6149,-122.44537
@@ -17,9 +17,11 @@ Union Valley, Union Valley,UNV,NA,38.871366,-120.422482
 Loon Lake, Loon Lake,LON,NA,38.995834,-120.314511
 Ice House, Ice House,ICH,NA,38.82393,-120.342309
 Nimbus, Nimbus, NAT,NIMC1,38.639647,-121.209933
-Indian Valley, Indian Valley,INV,NA,39.119006,-122.540437
+Indian Valley, Indian Valley,INV,INVC1,39.119006,-122.540437
 Berryessa, Berryessa,BER,LBEC1,38.588937,-122.234696
 Black Butte, Black Butte,BLB,BLBC1,39.787223,-122.360578
+East Park, East Park, NA, EPRC1, NA, NA
+Stony Gorge, Stony Gorge, NA, SGEC1, NA, NA
 New Hogan, New Hogan,NHG,NHGC1,38.153322,-120.802093
 Camanche, Camanche,CMN,CMCC1,38.224556,-120.996085
 Pardee, Pardee,PAR,NA,38.261574,-120.846178
@@ -46,7 +48,6 @@ Cachuma, Cachuma,CCH,CCHC1,34.569473,-119.932903
 Pyramid, Pyramid,PYM,PYMC1,34.653321,-118.775209
 Castaic, Castaic,CAS,CSKC1,34.525557,-118.605292
 Lake Perris, Lake Perris,PRR,NA,33.854275,-117.179205
-East Park, East Park, NA, NA, NA, NA
 Goodwin, Goodiwn, NA, NA, NA, NA
 Eleanor, Eleanor, NA, LNRC1, NA, NA
 Burns Reservoir, NA, NA, BNCC1, NA, NA
@@ -58,7 +59,11 @@ NF Diversion Dam,  NA, NA, NDVC1, NA, NA
 Prosser, NA, NA, NA, NA, NA
 Below Our House, NA, NA, OURC1, NA, NA
 Martis, NA, NA, MTSC1, NA, NA
+Rollins, NA, NA, ROLC1, NA, NA
+Camp Far West, NA, NA, CFWC1, NA, NA
 Jackson Meadows, NA, NA, JKRC1, NA, NA
+Fordyce, NA, NA, FOCC1, NA, NA
+Spaulding, NA, NA, SUAC1, NA, NA
 Scotts Falt, NA, NA, SOVC1, NA, NA
 Farmington, NA, NA, FRGC1, NA, NA
 San Antonio, NA, NA, SNRC1, NA, NA
