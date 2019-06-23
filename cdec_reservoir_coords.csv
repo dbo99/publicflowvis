@@ -1,48 +1,48 @@
-res_name_cdec,res_id_cdec,lat_middleres_wgs84,lon_middleres_wgs84
-Trinity,CLE,40.83615,-122.78548
-Whiskeytown,WHI,40.62386,-122.56661
-Lewiston,LEW,40.74453,-122.80037
-Sonoma (Warm Springs),WRS,38.69475,-123.02397
-Mendocino (Coyote),COY,39.21769,-123.17339
-Shasta,SHA,40.77326,-122.37207
-Keswick,KES,40.6149,-122.44537
-Oroville,ORO,39.559697,-121.458106
-Antelope,ANT,40.178997,-120.592638
-Frenchman,FRD,39.906697,-120.192237
-Lake Davis,DAV,39.916214,-120.511755
-Bullards Bar,BUL,39.4393787,-121.13058
-Englebright,ENG,39.25347,-121.267539
-Folsom,FOL,38.720229,-121.13882
-Union Valley,UNV,38.871366,-120.422482
-Loon Lake,LON,38.995834,-120.314511
-Ice House,ICH,38.82393,-120.342309
-Nimbus,NAT,38.639647,-121.209933
-Indian Valley,INV,39.119006,-122.540437
-Berryessa,BER,38.588937,-122.234696
-Black Butte,BLB,39.787223,-122.360578
-New Hogan,NHG,38.153322,-120.802093
-Camanche,CMN,38.224556,-120.996085
-Pardee,PAR,38.261574,-120.846178
-Donnell's,DON,38.334488,-119.94615
-Beardsley,BRD,38.208774,-120.070951
-Tulloch,TUL,37.880127,-120.600203
-New Melones,NML,37.985159,-120.539874
-Don Pedro,DNP,37.735227,-120.385488
-Hetch Hetchy,HTH,37.958554,-119.768634
-Cherry Valley,CHV,37.999752,-119.907446
-McClure (Exchequer),EXC,37.598485,-120.265015
-Eastman (Buchanan),BUC,37.22359,-119.97735
-Hensley (Hidden),HID,37.114018,-119.882862
-Millerton (Friant),MIL,37.009286,-119.682751
-San Luis,SNL,37.071307,-121.131507
-Pine Flat,PNF,36.854891,-119.316617
-Kaweah (Terminus),TRM,36.406431,-118.982363
-Success,SCC,36.078814,-118.14247
-Isabella,ISB,35.666218,-118.428381
-Stampede,STP,39.477445,-120.133677
-Independence,INP,39.443524,-120.310292
-Donner,DNN,39.32367,-120.26836
-Cachuma,CCH,34.569473,-119.932903
-Pyramid,PYM,34.653321,-118.775209
-Castaic,CAS,34.525557,-118.605292
-Lake Perris,PRR,33.854275,-117.179205
+res,res_name_cdec,res_id_cdec,lat_middleres_wgs84,lon_middleres_wgs84
+Trinity,Trinity,CLE,40.83615,-122.78548
+Whiskeytown, Whiskeytown,WHI,40.62386,-122.56661
+Lewiston, Lewiston,LEW,40.74453,-122.80037
+Sonoma_warmspring, Sonoma (Warm Springs),WRS,38.69475,-123.02397
+Mendocino_coyote,Mendocino (Coyote),COY,39.21769,-123.17339
+Shasta,Shasta,SHA,40.77326,-122.37207
+Keswick, Keswick,KES,40.6149,-122.44537
+Oroville, Oroville,ORO,39.559697,-121.458106
+Antelope, Antelope,ANT,40.178997,-120.592638
+Frenchman,Frenchman,FRD,39.906697,-120.192237
+Lake Davis, Lake Davis,DAV,39.916214,-120.511755
+New Bullards Bar, Bullards Bar,BUL,39.4393787,-121.13058
+Englebright, Englebright,ENG,39.25347,-121.267539
+Folsom, Folsom,FOL,38.720229,-121.13882
+Union Valley, Union Valley,UNV,38.871366,-120.422482
+Loon Lake, Loon Lake,LON,38.995834,-120.314511
+Ice House, Ice House,ICH,38.82393,-120.342309
+Nimbus, Nimbus, NAT,38.639647,-121.209933
+Indian Valley, Indian Valley,INV,39.119006,-122.540437
+Berryessa, Berryessa,BER,38.588937,-122.234696
+Black Butte, Black Butte,BLB,39.787223,-122.360578
+New Hogan, New Hogan,NHG,38.153322,-120.802093
+Camanche, Camanche,CMN,38.224556,-120.996085
+Pardee, Pardee,PAR,38.261574,-120.846178
+Donnell, Donnell's,DON,38.334488,-119.94615
+Beardsley, Beardsley,BRD,38.208774,-120.070951
+Tulloch, Tulloch,TUL,37.880127,-120.600203
+New Melones, New Melones,NML,37.985159,-120.539874
+New Non Pedro, Don Pedro,DNP,37.735227,-120.385488
+Hetch Hetch, Hetch Hetchy,HTH,37.958554,-119.768634
+Cherry Valley, Cherry Valley,CHV,37.999752,-119.907446
+Exchequer, McClure (Exchequer),EXC,37.598485,-120.265015
+Eastman, Eastman (Buchanan),BUC,37.22359,-119.97735
+Hensley, Hensley (Hidden),HID,37.114018,-119.882862
+Millerton, Millerton (Friant),MIL,37.009286,-119.682751
+San Luis, San Luis,SNL,37.071307,-121.131507
+Pine Flat, Pine Flat,PNF,36.854891,-119.316617
+Kaweah, Kaweah (Terminus),TRM,36.406431,-118.982363
+Success, Success,SCC,36.078814,-118.14247
+Isabella, Isabella,ISB,35.666218,-118.428381
+Stampede, Stampede,STP,39.477445,-120.133677
+Independence, Independence,INP,39.443524,-120.310292
+Donner, Donner,DNN,39.32367,-120.26836
+Cachuma, Cachuma,CCH,34.569473,-119.932903
+Pyramid, Pyramid,PYM,34.653321,-118.775209
+Castaic, Castaic,CAS,34.525557,-118.605292
+Lake Perris, Lake Perris,PRR,33.854275,-117.179205
