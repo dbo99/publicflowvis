@@ -76,6 +76,7 @@ df_w <- df_w %>% mutate(storage_dailychange_percentchange_instant = ifelse(is.na
 df_w <- df_w %>% mutate(inflow_latest_cfs_meandly = ifelse(is.na(inflow_latest_cfs_meandly_cdec), inflow_latest_cfs_meandly_usbr, inflow_latest_cfs_meandly_cdec))
 df_w <- df_w %>% mutate(inflow_latest_af_meandly = ifelse(is.na(inflow_latest_af_meandly_cdec), inflow_latest_af_meandly_usbr, inflow_latest_af_meandly_cdec))
 
+#to do - inflow daily change for cdec, both af and cfs
 
 df_w <- df_w[,order(colnames(df_w))]
 colnames(df_w)
