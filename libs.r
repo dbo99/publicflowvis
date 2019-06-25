@@ -1,4 +1,7 @@
+
+
 {
+  library(raster)
   library(tidyverse)
   library(lubridate)
   #library(gghighlight)
@@ -17,4 +20,5 @@
   library(htmlwidgets)
   library(pdftools)
   library(zoo)
+  
 }
