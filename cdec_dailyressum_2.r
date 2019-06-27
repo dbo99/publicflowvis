@@ -153,6 +153,10 @@ cdec_res_table <- rbind(cdec_res_table, cdec_res_table_outflowdlyaf)
 
 
 
+
+
+##### stamp source
+
 cdec_res_table <- cdec_res_table %>% select(-source) %>% rename_all(paste0, "_cdec") %>% 
                                mutate(cdecid = cdecid_cdec) %>% select(-cdecid_cdec)
 

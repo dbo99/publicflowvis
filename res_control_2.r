@@ -1,12 +1,13 @@
 
 {
-rm(list = ls()) 
-mainkeepers <- c("shasta_fnf", "friant_fnf", "newmelones_fnf", "pineflat_fnf", "cdec_dailysum", "mainkeepers", "usbr_fnf", "corps_fnf", "df")
+
+mainkeepers <- c("shasta_fnf", "friant_fnf", "newmelones_fnf", "pineflat_fnf", "cdec_dailysum", "mainkeepers", "usbr_fnf", "corps_fnf", "df_w", "m",
+                  "cdec_usgs_cnrfc")
 rm(list= ls()[!(ls() %in% mainkeepers)])
 setwd("~/Documents/publicflowvis")
 source("libs.r")
 source("fun_defs.r")
-}
+
 
 #### full natural flow ####
 # usbr_fnf
@@ -66,22 +67,27 @@ as_tibble(df_w)
 colnames(df_w)
 
 
-# normalize - need single value if two agencies have same data
+# take single value if two agencies have same data, 
 #storage
 df_w <- df_w %>% mutate(storage_latest_af_instant = ifelse(is.na(storage_latest_af_instant_cdec), storage_latest_af_instant_usbr, storage_latest_af_instant_cdec))
-df_w <- df_w %>% mutate(storage_dailychange_af_instant = ifelse(is.na(storage_dailychange_af_instant_cdec), storage_dailychange_af_instant_usbr, storage_dailychange_af_instant_cdec))
 df_w <- df_w %>% mutate(storage_latest_percentfull_instant = ifelse(is.na(storage_latest_percentfull_instant_cdec), storage_latest_percentfull_instant_usbr, storage_latest_percentfull_instant_cdec))
+df_w <- df_w %>% mutate(storage_dailychange_af_instant = ifelse(is.na(storage_dailychange_af_instant_cdec), storage_dailychange_af_instant_usbr, storage_dailychange_af_instant_cdec))
 df_w <- df_w %>% mutate(storage_dailychange_percentchange_instant = ifelse(is.na(storage_dailychange_percentchange_instant_cdec), storage_dailychange_percentchange_instant_usbr, storage_dailychange_percentchange_instant_cdec))
+df_w <- df_w %>% mutate(storage_prevyeartoday_af_instant = storage_prevyeartoday_af_instant_cdec)#ifelse(is.na(storage_dailychange_percentchange_instant_cdec), storage_dailychange_percentchange_instant_usbr, storage_dailychange_percentchange_instant_cdec))
 # inflow
 df_w <- df_w %>% mutate(inflow_latest_cfs_meandly = ifelse(is.na(inflow_latest_cfs_meandly_cdec), inflow_latest_cfs_meandly_usbr, inflow_latest_cfs_meandly_cdec))
 df_w <- df_w %>% mutate(inflow_latest_af_meandly = ifelse(is.na(inflow_latest_af_meandly_cdec), inflow_latest_af_meandly_usbr, inflow_latest_af_meandly_cdec))
+# outflow 
+df_w <- df_w %>% mutate(outlow_latest_af_meandly = outflow_latest_af_meandly_cdec)#ifelse(is.na(outflow_latest_cfs_meandly_cdec), outflow_latest_cfs_meandly_usbr, outflow_latest_cfs_meandly_cdec))
+df_w <- df_w %>% mutate(outflow_latest_cfs_meandly = outflow_latest_cfs_meandly_cdec)#ifelse(is.na(outflow_latest_af_meandly_cdec), outflow_latest_af_meandly_usbr, outflow_latest_af_meandly_cdec))
+}
+colnames(df_w)
 
-#to do - inflow daily change for cdec, both af and cfs
 
 df_w <- df_w[,order(colnames(df_w))]
 colnames(df_w)
 
-df_w <- df_w %>% mutate(storage_dailychange_af_instant_cdec_abs = abs(storage_dailychange_af_instant_cdec))
+df_w <- df_w %>% mutate(storage_prevyeartoday_af_instant_abs = abs(storage_prevyeartoday_af_instant))
 
 
 maptypes = c(
@@ -102,11 +108,11 @@ lopt = labelOptions(noHide = TRUE,
 #pal <- colorNumeric(c("#d7191c","#fdae61","#ffffbf","#abd9e9", "#2c7bb6"), df_w$storage_dailychange_af_instant_cdec, reverse = TRUE)
 pal = mapviewPalette("mapviewSpectralColors")
 #m <- mapview(df_w["inflow_latest_af_meandly_cdec_2019-06-24"], #burst = TRUE, hide = TRUE, 
-m <- mapview(df_w["storage_dailychange_af_instant_cdec"], #burst = TRUE, hide = TRUE, 
+m <- mapview(df_w["storage_prevyeartoday_af_instant"], #burst = TRUE, hide = TRUE, 
              #col.regions = RColorBrewer::RdBu, 
              col.regions = pal(100),
              #at = seq(min_rt, max_rt+2500, 2500),
-           cex = df_w$storage_dailychange_af_instant_cdec_abs/1000,  #24
+           cex = df_w$storage_prevyeartoday_af_instant_abs/100000,  #24
            #cex = df_w[31],  #29
              #cex = "storage_dailychange_af_instant_usbr_2019-06-23",  #14          
              alpha.regions = 0.3,
@@ -121,5 +127,5 @@ m <- mapview(df_w["storage_dailychange_af_instant_cdec"], #burst = TRUE, hide = 
   m
 
 
-colnames(df_w)
+  rm(list= ls()[!(ls() %in% mainkeepers)])
       
